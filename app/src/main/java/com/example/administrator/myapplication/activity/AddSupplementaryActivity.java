@@ -140,6 +140,7 @@ public class AddSupplementaryActivity extends BaseActivity<AddSupplementaryContr
     @Override
     public void resultGetAddSupplementarImg(GetAddSupplementaryBean data) {
 
+
     }
 
     @Override

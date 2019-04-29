@@ -5,22 +5,22 @@ package com.example.administrator.myapplication.bean;
  */
 
 public class SupplementaryBean {
-    private String imgName;
-    private String imgPath;
+    private String far_type;
+    private String far_imgurl;
 
     public String getImgName() {
-        return imgName;
+        return far_type;
     }
 
     public void setImgName(String imgName) {
-        this.imgName = imgName;
+        this.far_type = imgName;
     }
 
     public String getImgPath() {
-        return imgPath;
+        return far_imgurl;
     }
 
     public void setImgPath(String imgPath) {
-        this.imgPath = imgPath;
+        this.far_imgurl = imgPath;
     }
 }

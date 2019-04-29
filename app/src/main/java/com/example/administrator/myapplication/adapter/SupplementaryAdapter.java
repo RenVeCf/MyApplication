@@ -46,6 +46,7 @@ public class SupplementaryAdapter extends BaseQuickAdapter<SupplementaryBean, Ba
                 .setVisible(R.id.tv_household_registration_down, true);
         helper.addOnClickListener(R.id.iv_household_registration)
                 .addOnClickListener(R.id.iv_household_registration_del);
+        Log.e("TAG==",item.getImgPath()+"==");
         Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getImgPath()).apply(new RequestOptions()).into(ivSupplementary);
         ivSupplementaryDel.setVisibility(View.VISIBLE);
     }
@@ -73,7 +74,7 @@ public class SupplementaryAdapter extends BaseQuickAdapter<SupplementaryBean, Ba
     public String getLoadString(){
         List<Map<String, String>> listMap = new ArrayList<>();
         for (SupplementaryBean dataBean :data){
-            if (TextUtils.isEmpty(dataBean.getImgPath())){
+            if (!TextUtils.isEmpty(dataBean.getImgPath())){
                 Map<String, String> map = new HashMap<>();
                 map.put("far_userid", (String) SPUtil.get(mContext, IConstants.USER_ID, ""));
                 map.put("far_type", dataBean.getImgName()+"");

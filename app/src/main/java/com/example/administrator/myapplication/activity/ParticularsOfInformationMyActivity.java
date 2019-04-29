@@ -315,38 +315,51 @@ public class ParticularsOfInformationMyActivity extends BaseActivity<SelectMyInf
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_particulars_of_information_my_id_card:
+                //身份证
 //                Bundle bundle = new Bundle();
 //                bundle.putSerializable("selectMyInfoBean", selectMyInfoBean);
 //                startActivity(new Intent(this, NullLayoutActivity.class).putExtras(bundle));
+                NullLayoutActivity.launch(this,0,proId);
                 break;
             case R.id.ll_particulars_of_information_my_marriage_certificate:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                //结婚证
+
+//                startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.ll_particulars_of_information_my_household_registration_book:
+                //户口本
                 startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.ll_particulars_of_information_my_property_ownership_certificate:
+                //房产证
                 startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.ll_particulars_of_information_my_collateral:
+                //抵押物
                 startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.ll_particulars_of_information_my_business_license:
+                //企业信息
                 startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.ll_particulars_of_information_my_credit_report:
+                //信用报告
                 startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.ll_particulars_of_information_my_bank_running_water:
+                //银行流水
                 startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.ll_particulars_of_information_my_assessment_report:
+                //评估报告
                 startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.ll_particulars_of_information_my_production_adjustment:
+                //产调
                 startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.ll_particulars_of_information_my_supplementary_materials:
+                //补充资料
                 startActivity(new Intent(this, NullLayoutActivity.class));
                 break;
             case R.id.bt_edit:

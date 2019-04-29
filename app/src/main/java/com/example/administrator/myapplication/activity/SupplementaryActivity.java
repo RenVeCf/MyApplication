@@ -116,11 +116,15 @@ public class SupplementaryActivity extends BaseActivity<AddSupplementaryContract
                         SupplementaryBean supplementaryBean = list.get(position);
                         if (!TextUtils.isEmpty(supplementaryBean.getImgPath())){
                             BigImageActivity.launch(SupplementaryActivity.this,supplementaryBean.getImgPath());
+                        }else {
+
                         }
                         break;
                 }
             }
         });
+        View view = View.inflate(this,R.layout.null_data,null);
+        mGrowthValueAdapter.setEmptyView(view);
     }
 
     @Override
@@ -190,6 +194,12 @@ public class SupplementaryActivity extends BaseActivity<AddSupplementaryContract
 
     @Override
     public void resultGetAddSupplementarImg(GetAddSupplementaryBean data) {
+        list.clear();
+        list.addAll(data.data);
+        if (list.size() == 0){
+
+        }
+        mGrowthValueAdapter.notifyDataSetChanged();
 
 
     }
