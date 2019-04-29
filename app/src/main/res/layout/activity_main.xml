@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl_my_information"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_not_sidebar_my_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <com.example.administrator.myapplication.common.view.TopView
+            android:id="@+id/tv_main_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y250"
+            android:background="@color/white"
+            android:gravity="bottom"
+            app:is_sidebar="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/white" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y120"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_navigation_my_information"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/select_icon_my_information"
+                android:gravity="center"
+                android:text="@string/my_information"
+                android:textColor="@drawable/tx_select_main"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_navigation_documents_received"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/select_icon_documents_received"
+                android:gravity="center"
+                android:text="@string/documents_received"
+                android:textColor="@drawable/tx_select_main"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_navigation_documents_of_concern"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/select_icon_documents_of_concern"
+                android:gravity="center"
+                android:text="@string/documents_of_concern"
+                android:textColor="@drawable/tx_select_main"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sidebar_my_information"
+        android:layout_width="@dimen/x700"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_head"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y150"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/x50"
+            android:layout_marginTop="@dimen/y300"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user_head"
+                android:layout_width="@dimen/x150"
+                android:layout_height="@dimen/y150" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x50"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/y80"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y800"
+            android:layout_marginTop="@dimen/y80"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_service_organization"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_white_service_organization"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_sidebar_item_select_white"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_blue_service_organization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/bg_sidebar_item_select"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_service_organization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/x50"
+                    android:layout_marginStart="@dimen/x60"
+                    android:layout_toEndOf="@+id/iv_blue_service_organization"
+                    app:srcCompat="@drawable/ic_sidebar_service_organization_select" />
+
+                <TextView
+                    android:id="@+id/tv_service_organization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_service_organization"
+                    android:text="@string/service_organization"
+                    android:textColor="@color/tx_select_fragment" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_contact_platform"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_white_contact_platform"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_sidebar_item_select_white"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_blue_contact_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/bg_sidebar_item_select"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_contact_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/x50"
+                    android:layout_marginStart="@dimen/x60"
+                    android:layout_toEndOf="@+id/iv_blue_contact_platform"
+                    app:srcCompat="@drawable/select_icon_contact_platform" />
+
+                <TextView
+                    android:id="@+id/tv_contact_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_contact_platform"
+                    android:text="@string/contact_platform"
+                    android:textColor="@drawable/tx_select_main" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_business_cooperation"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_white_business_cooperation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/bg_sidebar_item_select_white"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_blue_business_cooperation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_sidebar_item_select"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_business_cooperation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/x50"
+                    android:layout_marginStart="@dimen/x60"
+                    android:layout_toEndOf="@+id/iv_blue_business_cooperation"
+                    app:srcCompat="@drawable/select_icon_business_cooperation" />/>
+
+                <TextView
+                    android:id="@+id/tv_business_cooperation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_business_cooperation"
+                    android:text="@string/business_cooperation"
+                    android:textColor="@drawable/tx_select_main" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_locked_files"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_white_locked_files"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_sidebar_item_select_white"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_blue_locked_files"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/bg_sidebar_item_select"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_locked_files"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/x50"
+                    android:layout_marginStart="@dimen/x60"
+                    android:layout_toEndOf="@+id/iv_blue_locked_files"
+                    app:srcCompat="@drawable/select_icon_locked_files" />
+
+                <TextView
+                    android:id="@+id/tv_locked_files"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_locked_files"
+                    android:text="@string/locked_files"
+                    android:textColor="@drawable/tx_select_main" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_setting"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_white_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_sidebar_item_select_white"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_blue_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/bg_sidebar_item_select"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/x50"
+                    android:layout_marginStart="@dimen/x60"
+                    android:layout_toEndOf="@+id/iv_blue_setting"
+                    app:srcCompat="@drawable/select_icon_setting" />
+
+                <TextView
+                    android:id="@+id/tv_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_setting"
+                    android:text="@string/setting"
+                    android:textColor="@drawable/tx_select_main" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

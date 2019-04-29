@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.EnterpriseInformationActivity">
+
+    <com.example.administrator.myapplication.common.view.TopView
+        android:id="@+id/tv_enterprise_information_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="bottom"
+        app:is_back="true"
+        app:title="@string/enterprise_information"
+        app:title_color="@color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.administrator.myapplication.weight.MyRecycleview
+                android:id="@+id/rv_enterprise_information"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitesmoke">
+
+        <Button
+            android:id="@+id/bt_enterprise_information"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y135"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/y40"
+            android:layout_marginEnd="@dimen/x45"
+            android:layout_marginStart="@dimen/x45"
+            android:layout_marginTop="@dimen/y40"
+            android:background="@drawable/ic_login_bt"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

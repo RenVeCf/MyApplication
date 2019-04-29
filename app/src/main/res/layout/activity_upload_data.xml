@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical"
+    tools:context=".activity.UploadDataActivity">
+
+    <com.example.administrator.myapplication.common.view.TopView
+        android:id="@+id/tv_upload_data_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="bottom"
+        app:is_back="true"
+        app:title="@string/upload_data"
+        app:title_color="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/y10"
+        android:paddingStart="@dimen/x45"
+        android:paddingTop="@dimen/y10"
+        android:text="@string/essential_information"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whitesmoke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginEnd="@dimen/x54"
+                android:layout_marginStart="@dimen/x54"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textColor="@color/tx_check_box" />
+
+                <EditText
+                    android:id="@+id/et_upload_data_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:hint="@string/input"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginEnd="@dimen/x54"
+                android:layout_marginStart="@dimen/x54"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/id_card"
+                    android:textColor="@color/tx_check_box" />
+
+                <EditText
+                    android:id="@+id/et_upload_data_id_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:hint="@string/input"
+                    android:inputType="number"
+                    android:maxLength="18"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginEnd="@dimen/x54"
+                android:layout_marginStart="@dimen/x54"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_number"
+                    android:textColor="@color/tx_check_box" />
+
+                <EditText
+                    android:id="@+id/et_upload_data_contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:hint="@string/input"
+                    android:inputType="phone"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginEnd="@dimen/x54"
+                android:layout_marginStart="@dimen/x54"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loan_amount"
+                    android:textColor="@color/tx_check_box" />
+
+                <EditText
+                    android:id="@+id/et_upload_data_loan_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:hint="@string/input"
+                    android:inputType="number"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_upload_data_handling_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginEnd="@dimen/x54"
+                android:layout_marginStart="@dimen/x54"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/handling_type"
+                    android:textColor="@color/tx_check_box" />
+
+                <TextView
+                    android:id="@+id/tv_handling_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x15"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/x45"
+                    android:layout_height="@dimen/y40"
+                    app:srcCompat="@drawable/ic_selector" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_upload_data_marital_status"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginEnd="@dimen/x54"
+                android:layout_marginStart="@dimen/x54"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/marital_status"
+                    android:textColor="@color/tx_check_box" />
+
+                <TextView
+                    android:id="@+id/tv_marital_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x15"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/x45"
+                    android:layout_height="@dimen/y40"
+                    app:srcCompat="@drawable/ic_selector" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_upload_data_spare_room"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginEnd="@dimen/x54"
+                android:layout_marginStart="@dimen/x54"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/spare_room"
+                    android:textColor="@color/tx_check_box" />
+
+                <TextView
+                    android:id="@+id/tv_spare_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x15"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/x45"
+                    android:layout_height="@dimen/y40"
+                    app:srcCompat="@drawable/ic_selector" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/bg_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_upload_data_brief_outline"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginEnd="@dimen/x54"
+                android:layout_marginStart="@dimen/x54"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/brief_outline"
+                    android:textColor="@color/tx_check_box" />
+
+                <ImageView
+                    android:layout_width="@dimen/x45"
+                    android:layout_height="@dimen/y40"
+                    app:srcCompat="@drawable/ic_selector" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_upload_data_next"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y135"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x45"
+            android:layout_marginEnd="@dimen/x45"
+            android:layout_marginStart="@dimen/x45"
+            android:background="@drawable/ic_login_bt"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical"
+    tools:context=".activity.AboutUsActivity">
+
+    <com.example.administrator.myapplication.common.view.TopView
+        android:id="@+id/tv_about_us_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="bottom"
+        app:is_back="true"
+        app:title="@string/about_us"
+        app:title_color="@color/black" />
+
+    <WebView
+        android:id="@+id/wv_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/x45"
+        android:layout_marginTop="@dimen/y45"
+        android:layout_marginEnd="@dimen/x45"
+        android:layout_marginBottom="@dimen/y120"
+        android:background="@color/white"
+        android:padding="@dimen/x45"
+        android:textColor="@color/black" />
+</LinearLayout>

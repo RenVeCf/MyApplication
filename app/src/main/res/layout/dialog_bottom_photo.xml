@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y400"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/y60">
+
+    <Button
+        android:id="@+id/bt_dialog_bottom_photograph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x45"
+        android:layout_marginEnd="@dimen/x45"
+        android:background="@drawable/dialog_top_up"
+        android:text="@string/photograph"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/x45"
+        android:layout_marginEnd="@dimen/x45"
+        android:background="@color/whitesmoke" />
+
+    <Button
+        android:id="@+id/bt_dialog_bottom_select_from_the_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x45"
+        android:layout_marginEnd="@dimen/x45"
+        android:background="@drawable/dialog_top_down"
+        android:text="@string/select_from_the_album"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/bt_dialog_bottom_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x45"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginEnd="@dimen/x45"
+        android:background="@drawable/dialog_top_selector"
+        android:text="@string/cancel"
+        android:textColor="@color/tx_select_fragment"
+        android:textSize="18sp" />
+</LinearLayout>

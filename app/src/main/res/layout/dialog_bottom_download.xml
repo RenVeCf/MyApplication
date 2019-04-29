@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y400"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/y60">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x50"
+        android:text="@string/download"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/et_dialog_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x90"
+        android:layout_marginEnd="@dimen/x90"
+        android:background="#ffeeeeee"
+        android:hint="@string/input_email"
+        android:padding="@dimen/x15"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/bt_dialog_bottom_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y135"
+        android:layout_marginStart="@dimen/x45"
+        android:layout_marginTop="@dimen/y45"
+        android:layout_marginEnd="@dimen/x45"
+        android:background="@drawable/ic_login_bt"
+        android:text="@string/confirm"
+        android:textColor="@color/white" />
+</LinearLayout>

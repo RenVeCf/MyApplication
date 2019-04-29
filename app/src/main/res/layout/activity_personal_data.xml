@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical"
+    tools:context=".activity.PersonalDataActivity">
+
+    <com.example.administrator.myapplication.common.view.TopView
+        android:id="@+id/tv_personal_data_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="bottom"
+        app:is_back="true"
+        app:title="@string/personal_data"
+        app:title_color="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y5"
+        android:layout_marginStart="@dimen/x45"
+        android:layout_marginTop="@dimen/y5"
+        android:text="@string/essential_information"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_update_personal_data_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/y45">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/head_img"
+            android:textColor="@color/black" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_personal_data_head"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/y100"
+            android:layout_marginEnd="@dimen/x15"
+            android:src="@mipmap/test_bitmap" />
+
+        <ImageView
+            android:layout_width="@dimen/x45"
+            android:layout_height="@dimen/y40"
+            app:srcCompat="@drawable/ic_selector" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whitesmoke" />
+
+    <LinearLayout
+        android:id="@+id/ll_update_personal_data_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/y45">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/name"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_personal_data_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x15" />
+
+        <ImageView
+            android:layout_width="@dimen/x45"
+            android:layout_height="@dimen/y40"
+            app:srcCompat="@drawable/ic_selector" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whitesmoke" />
+
+    <LinearLayout
+        android:id="@+id/ll_update_personal_data_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/y45">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/phone_num"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_personal_data_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

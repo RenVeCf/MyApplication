@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y400"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/y60">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x50"
+        android:text="@string/forward"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/et_dialog_forward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x90"
+        android:layout_marginEnd="@dimen/x90"
+        android:background="#ffeeeeee"
+        android:hint="@string/input_forwarder"
+        android:inputType="phone"
+        android:padding="@dimen/x15"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="@dimen/x500"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x90"
+        android:layout_marginTop="@dimen/y35"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_dialog_forward_watermark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:text="@string/watermark"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_forward_no_watermark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="@string/no_watermark"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y35"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_dialog_forward_can_forward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:text="@string/can_forward"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_forward_no_forward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="@string/no_forward"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y35"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_dialog_forward_can_download"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="@string/can_download"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_forward_no_download"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:text="@string/no_download"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_dialog_bottom_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y135"
+        android:layout_marginStart="@dimen/x45"
+        android:layout_marginTop="@dimen/y45"
+        android:layout_marginEnd="@dimen/x45"
+        android:background="@drawable/ic_login_bt"
+        android:text="@string/confirm"
+        android:textColor="@color/white" />
+</LinearLayout>

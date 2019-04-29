@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical"
+    tools:context=".activity.BankRunningWaterActivity">
+
+    <com.example.administrator.myapplication.common.view.TopView
+        android:id="@+id/tv_bank_running_water_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="bottom"
+        app:is_add="true"
+        app:is_back="true"
+        app:title="@string/bank_running_water"
+        app:title_color="@color/black" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_bank_running_water"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitesmoke">
+
+        <Button
+            android:id="@+id/bt_bank_running_water"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y135"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/y40"
+            android:layout_marginEnd="@dimen/x45"
+            android:layout_marginStart="@dimen/x45"
+            android:layout_marginTop="@dimen/y40"
+            android:background="@drawable/ic_login_bt"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

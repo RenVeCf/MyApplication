@@ -1,0 +1,158 @@
+<resources>
+    <array name="permissions">
+        <item>@string/permission_recode_audio_hint</item>
+        <item>@string/permission_get_accounts_hint</item>
+        <item>@string/permission_read_phone_hint</item>
+        <item>@string/permission_call_phone_hint</item>
+        <item>@string/permission_camera_hint</item>
+        <item>@string/permission_access_fine_location_hint</item>
+        <item>@string/permission_access_coarse_location_hint</item>
+        <item>@string/permission_read_external_hint</item>
+        <item>@string/permission_white_external_hint</item>
+    </array>
+
+    <string name="permission_get_accounts_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_GET_ACCOUNTS</string>
+    <string name="permission_read_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_READ_PHONE_STATE</string>
+    <string name="permission_call_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_CALL_PHONE</string>
+    <string name="permission_camera_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_CAMERA</string>
+    <string name="permission_access_fine_location_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_ACCESS_FINE_LOCATION</string>
+    <string name="permission_access_coarse_location_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_ACCESS_COARSE_LOCATION</string>
+    <string name="permission_read_external_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_READ_EXTERNAL_STORAGE</string>
+    <string name="permission_white_external_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_WRITE_EXTERNAL_STORAGE</string>
+    <string name="permission_recode_audio_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_RECORD_AUDIO</string>
+
+
+    <string name="app_name">阅阅</string>
+    <string name="Toast_permission">权限</string>
+    <string name="Dialog_Multi_Permission">多个权限</string>
+    <string name="permission_illegal_code">非法权限</string>
+    <string name="not_use">未使用</string>
+    <string name="failed">已失效</string>
+    <string name="loading">正在加载...</string>
+    <string name="open_network">请打开网络</string>
+    <string name="link_timeout">请求超时</string>
+    <string name="link_failed">连接失败</string>
+    <string name="click_out_again">再按一次退出程序</string>
+    <string name="out_to_login">确定要退出登录吗？</string>
+    <string name="login">登录</string>
+    <string name="phone_num">手机号</string>
+    <string name="pwd">密码</string>
+    <string name="forget_pwd"><u>忘记密码 ?</u></string>
+    <string name="forget_pwd_">忘记密码</string>
+    <string name="register_now"><u>立即注册</u></string>
+    <string name="my_information">我的资料</string>
+    <string name="documents_received">收到文件</string>
+    <string name="documents_of_concern">关注文件</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="upload_data">上传资料</string>
+    <string name="service_organization">服务机构</string>
+    <string name="contact_platform">联系平台</string>
+    <string name="business_cooperation">商务合作</string>
+    <string name="locked_files">锁定的文件</string>
+    <string name="setting">设置</string>
+    <string name="essential_information">基本信息</string>
+    <string name="id_card">身份证号</string>
+    <string name="input">请输入</string>
+    <string name="contact_number">联系电话</string>
+    <string name="loan_amount">借款金额</string>
+    <string name="handling_type">办理类型</string>
+    <string name="brief_outline">简述概要</string>
+    <string name="spare_room">是否有备用房</string>
+    <string name="marital_status">婚姻状况</string>
+    <string name="next">下一步</string>
+    <string name="name">姓名</string>
+    <string name="usage_of_loan">借款用途</string>
+    <string name="payment">还款来源</string>
+    <string name="monthly_average_flow">月均流水</string>
+    <string name="annual_opening">年开票额</string>
+    <string name="confirm">确认</string>
+    <string name="input_usage_of_loan">请输入借款用途</string>
+    <string name="input_monthly_average_flow">请输入月均流水</string>
+    <string name="input_annual_opening">请输入年开票额</string>
+    <string name="input_payment">请输入还款来源</string>
+    <string name="card_info">证件信息</string>
+    <string name="marriage_certificate">结婚证</string>
+    <string name="household_registration_book">户口本</string>
+    <string name="property_ownership_certificate">房产证</string>
+    <string name="collateral">抵押物</string>
+    <string name="business_license">企业信息</string>
+    <string name="credit_report">信用报告</string>
+    <string name="bank_running_water">银行流水</string>
+    <string name="assessment_report">评估报告</string>
+    <string name="production_adjustment">产调</string>
+    <string name="supplementary_materials">补充材料</string>
+    <string name="register">注册</string>
+    <string name="verification_code">验证码</string>
+    <string name="get">获取</string>
+    <string name="login_now"><u>立即登录</u></string>
+    <string name="user_agreement"><u>我已阅读并同意《用户协议》</u></string>
+    <string name="name_of_borrower">借款人姓名:</string>
+    <string name="id_card_num">身份证号:</string>
+    <string name="loan_type">贷款类型:</string>
+    <string name="handling_type_">办理类型:</string>
+    <string name="loan_amount_">贷款金额:</string>
+    <string name="upload_time">上传时间:</string>
+    <string name="edit">编辑</string>
+    <string name="forward">转发</string>
+    <string name="off">关闭</string>
+    <string name="browse_record">浏览记录</string>
+    <string name="input_forwarder">请输入转发人</string>
+    <string name="watermark">带水印</string>
+    <string name="no_watermark">不带水印</string>
+    <string name="can_forward">允许转发</string>
+    <string name="no_forward">不允许转发</string>
+    <string name="can_download">允许下载</string>
+    <string name="no_download">不允许下载</string>
+    <string name="particulars_of_information">资料详情</string>
+    <string name="marital_status_">婚姻状况:</string>
+    <string name="originator_">原创者:</string>
+    <string name="forwarder_">转发人:</string>
+    <string name="forwarding_time_">转发时间:</string>
+    <string name="whether_to_buy_houses_">是否购房:</string>
+    <string name="id">身份证</string>
+    <string name="download">下载</string>
+    <string name="locking">锁定</string>
+    <string name="follow">关注</string>
+    <string name="personal_data">个人资料</string>
+    <string name="head_img">头像</string>
+    <string name="input_name">请输入姓名</string>
+    <string name="photograph">拍照</string>
+    <string name="select_from_the_album">从相册选取</string>
+    <string name="cancel">取消</string>
+    <string name="about_us">关于我们</string>
+    <string name="feed_back">意见反馈</string>
+    <string name="input_feed_back">请输入反馈内容</string>
+    <string name="select">查看</string>
+    <string name="delete">删除</string>
+    <string name="input_email">请输入邮箱</string>
+    <string name="no_follow">取消关注</string>
+    <string name="share">分享</string>
+    <string name="my_identity_card">本人身份证</string>
+    <string name="add">添加</string>
+    <string name="add_supplementary">添加补充材料</string>
+    <string name="title">标题</string>
+    <string name="img">图片</string>
+    <string name="supplementary">补充材料</string>
+    <string name="opening_permit">开户许可证</string>
+    <string name="enterprise_credit_reporting">企业信用报告</string>
+    <string name="articles_of_incorporation">企业章程</string>
+    <string name="capital_verification_report">验资报告</string>
+    <string name="enterprise_information">企业信息</string>
+    <string name="error_phone_num">手机号码不正确！</string>
+    <string name="error_pwd">密码错误！</string>
+    <string name="error_login">请选择正确的格式！</string>
+    <string name="six_length_captcha">验证码必须为6位数字</string>
+    <string name="error_check_box">请勾选用户协议！</string>
+    <string name="out">退出登录</string>
+    <string name="id_card_error">请输入正确的身份证号！</string>
+    <string name="position">职务</string>
+    <string name="input_modify_service_organization">请输入服务机构</string>
+    <string name="input_modify_position">请输入职位</string>
+    <string name="barcode_page">条码页</string>
+    <string name="address_page">地址页</string>
+    <string name="attachment_page">附记页</string>
+    <string name="plan">平面图</string>
+    <string name="zong_map">宗地图</string>
+</resources>
