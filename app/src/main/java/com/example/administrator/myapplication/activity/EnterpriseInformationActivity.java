@@ -3,6 +3,7 @@ package com.example.administrator.myapplication.activity;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -179,6 +180,7 @@ public class EnterpriseInformationActivity extends BaseActivity<HouseholdRegistr
             case PictureSelector.SELECT_REQUEST_CODE:
                 if (data != null) {
                     String picturePath = data.getStringExtra(PictureSelector.PICTURE_PATH);
+                    Log.e("TAG","图片地址="+picturePath);
                     Map<String, RequestBody> map = new HashMap<String, RequestBody>();
                     map.put("image\";filename=\"" + ".jpeg", getImageRequestBody(picturePath));
                     getPresenter().uploadImg(map, true, false);
@@ -189,6 +191,7 @@ public class EnterpriseInformationActivity extends BaseActivity<HouseholdRegistr
 
     @Override
     public void resultUploadImg(UploadImgBean data) {
+
         String idImgPath = data.getData().get(0);
         GetCompanyInform.DataBean.StroBean.StroSecondBean bean = multipleAdapterList.get(position);
         GetCompanyInform.DataBean.StroBean.StroSecondBean.StroThreeBean stroThreeBean = bean.data.get(childPosition);
@@ -212,6 +215,7 @@ public class EnterpriseInformationActivity extends BaseActivity<HouseholdRegistr
 
     @Override
     public void resultModifyEnterpriseImgData(String data) {
+
         Gson g = new Gson();
         IdImgDataBean obj = g.fromJson(data, IdImgDataBean.class);
         ToastUtil.showShortToast(obj.getMsg());

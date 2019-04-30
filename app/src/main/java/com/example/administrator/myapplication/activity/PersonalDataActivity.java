@@ -127,7 +127,7 @@ public class PersonalDataActivity extends BaseActivity<UploadImgContract.View, U
     }
 
     public static RequestBody getImageRequestBody(String filePath) {
-        return RequestBody.create(MediaType.parse("image/jpeg"), new File(filePath));
+        return RequestBody.create(MediaType.parse("image/png"), new File(filePath));
     }
 
     @OnClick({R.id.ll_update_personal_data_head, R.id.ll_update_personal_data_name, R.id.iv_top_back})
