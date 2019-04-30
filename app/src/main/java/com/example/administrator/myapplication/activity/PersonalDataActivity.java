@@ -1,7 +1,9 @@
 package com.example.administrator.myapplication.activity;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -19,7 +21,9 @@ import com.example.administrator.myapplication.common.view.TopView;
 import com.example.administrator.myapplication.contract.UploadImgContract;
 import com.example.administrator.myapplication.presenter.UploadImgPresenter;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
+import com.example.administrator.myapplication.utils.LogUtils;
 import com.example.administrator.myapplication.utils.SPUtil;
+import com.google.gson.Gson;
 import com.gyf.barlibrary.ImmersionBar;
 import com.wildma.pictureselector.PictureSelector;
 
@@ -119,7 +123,7 @@ public class PersonalDataActivity extends BaseActivity<UploadImgContract.View, U
                 if (data != null) {
                     String picturePath = data.getStringExtra(PictureSelector.PICTURE_PATH);
                     Map<String, RequestBody> map = new HashMap<String, RequestBody>();
-                    map.put("image\";filename=\"" + ".jpeg", getImageRequestBody(picturePath));
+                    map.put("image\"; filename=\"" + "image" + "\"", getImageRequestBody(picturePath));
                     getPresenter().uploadImg(map, true, false);
                 }
                 break;
@@ -127,7 +131,10 @@ public class PersonalDataActivity extends BaseActivity<UploadImgContract.View, U
     }
 
     public static RequestBody getImageRequestBody(String filePath) {
-        return RequestBody.create(MediaType.parse("image/png"), new File(filePath));
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(filePath, options);
+        return RequestBody.create(MediaType.parse(options.outMimeType), new File(filePath));
     }
 
     @OnClick({R.id.ll_update_personal_data_head, R.id.ll_update_personal_data_name, R.id.iv_top_back})
@@ -148,11 +155,17 @@ public class PersonalDataActivity extends BaseActivity<UploadImgContract.View, U
 
     @Override
     public void resultUploadImg(UploadImgBean data) {
-        TreeMap<String, String> modifyPersonalDataMap = new TreeMap<>();
-        modifyPersonalDataMap.put("id", (String) SPUtil.get(this, IConstants.USER_ID, ""));
-        modifyPersonalDataMap.put("avatar", data.getData().get(0));
-        modifyPersonalDataMap.put("name", (String) SPUtil.get(this, IConstants.NAME, ""));
-        getPresenter().modifyPersonalData(modifyPersonalDataMap, true, false);
+        try{
+            Log.e("resultUploadImg",new Gson().toJson(data));
+            TreeMap<String, String> modifyPersonalDataMap = new TreeMap<>();
+            modifyPersonalDataMap.put("id", (String) SPUtil.get(this, IConstants.USER_ID, ""));
+            modifyPersonalDataMap.put("avatar", data.getData().get(0));
+            modifyPersonalDataMap.put("name", (String) SPUtil.get(this, IConstants.NAME, ""));
+            getPresenter().modifyPersonalData(modifyPersonalDataMap, true, false);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @Override
