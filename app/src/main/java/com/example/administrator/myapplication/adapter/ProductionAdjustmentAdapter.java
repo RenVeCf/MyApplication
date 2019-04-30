@@ -36,6 +36,14 @@ public class ProductionAdjustmentAdapter extends BaseQuickAdapter<GetProAdjustBe
         this.mDatas = data;
         this.context = context;
     }
+    private boolean isLook;
+
+    public ProductionAdjustmentAdapter(@Nullable Context context,List<GetProAdjustBean.DataBeanFirst> data,boolean isLook) {
+        super(R.layout.adpter_test, data);
+        this.mDatas = data;
+        this.context = context;
+        this.isLook = isLook;
+    }
 
     @Override
     protected void convert(BaseViewHolder helper, final GetProAdjustBean.DataBeanFirst item) {
@@ -57,7 +65,7 @@ public class ProductionAdjustmentAdapter extends BaseQuickAdapter<GetProAdjustBe
         rv.setItemAnimator(new DefaultItemAnimator()); //默认动画
 
         //初始化数据
-        final CategoryProAdjustAdapter categoryAdapter = new CategoryProAdjustAdapter(item.data);
+        final CategoryProAdjustAdapter categoryAdapter = new CategoryProAdjustAdapter(item.data,isLook);
         rv.setAdapter(categoryAdapter);
 
         categoryAdapter.setOnItemChildClickListener(new OnItemChildClickListener() {
@@ -79,6 +87,9 @@ public class ProductionAdjustmentAdapter extends BaseQuickAdapter<GetProAdjustBe
                 }
             }
         });
+        if (isLook){
+            helper.setVisible(R.id.tv_delete, false);
+        }
     }
 
     public boolean isCanLoad(){

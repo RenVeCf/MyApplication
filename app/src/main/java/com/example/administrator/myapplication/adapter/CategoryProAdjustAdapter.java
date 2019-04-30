@@ -27,6 +27,12 @@ public class CategoryProAdjustAdapter extends BaseQuickAdapter<GetProAdjustBean.
         super(R.layout.adapter_household_registration_item, data);
         this.data = data;
     }
+    private boolean isLook = false;
+public CategoryProAdjustAdapter(@Nullable List<GetProAdjustBean.DataBeanFirst.DataBeanSecond> data,boolean isLook) {
+        super(R.layout.adapter_household_registration_item, data);
+        this.data = data;
+        this.isLook = isLook;
+    }
 
 
     @Override
@@ -51,6 +57,9 @@ public class CategoryProAdjustAdapter extends BaseQuickAdapter<GetProAdjustBean.
         }
         helper.addOnClickListener(R.id.iv_household_registration)
                 .addOnClickListener(R.id.iv_household_registration_del);
+        if (isLook){
+            ivHouseholdRegistrationDel.setVisibility(View.GONE);
+        }
     }
 
 

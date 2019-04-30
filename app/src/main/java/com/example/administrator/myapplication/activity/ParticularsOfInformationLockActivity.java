@@ -29,7 +29,6 @@ import com.example.administrator.myapplication.contract.LockedFilesContract;
 import com.example.administrator.myapplication.presenter.LockedFilesPresenter;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
 import com.example.administrator.myapplication.utils.DateUtils;
-import com.example.administrator.myapplication.utils.LogUtils;
 import com.example.administrator.myapplication.utils.SPUtil;
 import com.example.administrator.myapplication.utils.ToastUtil;
 import com.example.administrator.myapplication.utils.isClickUtil;
@@ -221,37 +220,37 @@ public class ParticularsOfInformationLockActivity extends BaseActivity<LockedFil
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_particulars_of_information_lock_id_card:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,0,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_marriage_certificate:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,1,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_household_registration_book:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,2,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_property_ownership_certificate:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,3,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_collateral:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,4,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_business_license:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,5,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_credit_report:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,6,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_bank_running_water:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,7,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_assessment_report:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,8,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_production_adjustment:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,9,proId);
                 break;
             case R.id.ll_particulars_of_information_lock_supplementary_materials:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,10,proId);
                 break;
             case R.id.bt_delete:
                 setLockedFilesDialog(locId);

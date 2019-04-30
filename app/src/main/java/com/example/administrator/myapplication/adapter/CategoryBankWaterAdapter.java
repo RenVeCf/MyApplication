@@ -11,7 +11,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.bean.GetBankImgBean;
-import com.example.administrator.myapplication.bean.GetCreditReportBean;
 import com.example.administrator.myapplication.common.config.UrlConfig;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
 
@@ -22,10 +21,12 @@ import java.util.List;
  */
 public class CategoryBankWaterAdapter extends BaseQuickAdapter<GetBankImgBean.DataBean.DataBeanSecond, BaseViewHolder> {
     private List<GetBankImgBean.DataBean.DataBeanSecond> data;
+    private boolean isLook = false;
 
-    public CategoryBankWaterAdapter(@Nullable List<GetBankImgBean.DataBean.DataBeanSecond> data) {
+    public CategoryBankWaterAdapter(@Nullable List<GetBankImgBean.DataBean.DataBeanSecond> data,boolean isLook) {
         super(R.layout.adapter_household_registration_item, data);
         this.data = data;
+        this.isLook = isLook;
     }
 
 
@@ -46,6 +47,10 @@ public class CategoryBankWaterAdapter extends BaseQuickAdapter<GetBankImgBean.Da
         }
         helper.addOnClickListener(R.id.iv_household_registration)
                 .addOnClickListener(R.id.iv_household_registration_del);
+        if (isLook){
+            imageDel.setVisibility(View.GONE);
+
+        }
     }
 
 

@@ -12,7 +12,6 @@ import com.example.administrator.myapplication.bean.GetBankImgBean;
 import com.example.administrator.myapplication.bean.GetCollateralImgBean;
 import com.example.administrator.myapplication.bean.GetCompanyInform;
 import com.example.administrator.myapplication.bean.GetCreditReportBean;
-import com.example.administrator.myapplication.bean.GetEnterpriseBean;
 import com.example.administrator.myapplication.bean.GetHouseImgBean;
 import com.example.administrator.myapplication.bean.GetHouseholdRegistrationBookBean;
 import com.example.administrator.myapplication.bean.GetIdImgBean;

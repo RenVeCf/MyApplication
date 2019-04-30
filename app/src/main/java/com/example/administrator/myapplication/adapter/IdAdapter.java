@@ -15,7 +15,6 @@ import com.example.administrator.myapplication.common.config.IConstants;
 import com.example.administrator.myapplication.common.config.UrlConfig;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
 import com.example.administrator.myapplication.utils.SPUtil;
-import com.example.administrator.myapplication.utils.StringUtils;
 import com.example.administrator.myapplication.utils.ToastUtil;
 import com.google.gson.Gson;
 
@@ -27,9 +26,18 @@ import java.util.Map;
 public class IdAdapter extends BaseQuickAdapter<GetIdImgBean.DataBean, BaseViewHolder> {
     private List<GetIdImgBean.DataBean> data;
 
+    //编辑
     public IdAdapter(@Nullable List<GetIdImgBean.DataBean> data) {
         super(R.layout.adapter_id_item, data);
         this.data = data;
+    }
+
+    //编辑
+    public boolean isLook = false;
+    public IdAdapter(@Nullable List<GetIdImgBean.DataBean> data,boolean isLook) {
+        super(R.layout.adapter_id_item, data);
+        this.data = data;
+        this.isLook = isLook;
     }
 
     @Override
@@ -75,12 +83,17 @@ public class IdAdapter extends BaseQuickAdapter<GetIdImgBean.DataBean, BaseViewH
                 notifyDataSetChanged();
             }
         });
-        helper.setText(R.id.tv_my_identity_card,StringUtils.encodingGb(item.getCard_type())+"身份证");
+        helper.setText(R.id.tv_my_identity_card,(item.getCard_type())+"身份证");
         int position = helper.getLayoutPosition();
         if (position == 0) {
             helper.setVisible(R.id.tv_delete, false);
         } else {
             helper.setVisible(R.id.tv_delete, true);
+        }
+        if (isLook){
+            ivOneDel.setVisibility(View.GONE);
+            ivTwoDel.setVisibility(View.GONE);
+            helper.setVisible(R.id.tv_delete, false);
         }
 
 
@@ -103,10 +116,10 @@ public class IdAdapter extends BaseQuickAdapter<GetIdImgBean.DataBean, BaseViewH
         boolean isCanAdd = true;
         for (GetIdImgBean.DataBean dataBean :data){
             if (TextUtils.isEmpty(dataBean.getCard_positive())){
-                ToastUtil.showShortToast("请选择"+StringUtils.encodingGb(dataBean.getCard_type())+"身份证正面!");
+                ToastUtil.showShortToast("请选择"+(dataBean.getCard_type())+"身份证正面!");
                 isCanAdd = false;
             }else if (TextUtils.isEmpty(dataBean.getCard_negative())){
-                ToastUtil.showShortToast("请选择"+StringUtils.encodingGb(dataBean.getCard_type())+"身份证反面!");
+                ToastUtil.showShortToast("请选择"+(dataBean.getCard_type())+"身份证反面!");
                 isCanAdd = false;
             }
         }

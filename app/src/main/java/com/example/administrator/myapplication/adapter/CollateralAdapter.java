@@ -32,6 +32,12 @@ public class CollateralAdapter extends BaseQuickAdapter<GetCollateralImgBean.Dat
         super(R.layout.adapter_collater_item, data);
         this.data = data;
     }
+    private boolean isLook;
+ public CollateralAdapter(@Nullable List<GetCollateralImgBean.DataBean> data,boolean isLook) {
+        super(R.layout.adapter_collater_item, data);
+        this.data = data;
+        this.isLook = isLook;
+    }
 
     @Override
     protected void convert(BaseViewHolder helper, GetCollateralImgBean.DataBean item) {
@@ -81,57 +87,69 @@ public class CollateralAdapter extends BaseQuickAdapter<GetCollateralImgBean.Dat
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getMor_page1()).apply(new RequestOptions()).into(ivOne);
             ivOneDel.setVisibility(View.VISIBLE);
         }else {
-            ivOne.setImageResource(R.drawable.bg_id);
+            ivOne.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
+
             ivOneDel.setVisibility(View.GONE);
         }
         if (item.getMor_page2() != null && !item.getMor_page2().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getMor_page2()).apply(new RequestOptions()).into(ivTwo);
             ivTwoDel.setVisibility(View.VISIBLE);
         }else {
-            ivTwo.setImageResource(R.drawable.bg_id);
+            ivTwo.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivTwoDel.setVisibility(View.GONE);
         }
         if (item.getMor_page3() != null && !item.getMor_page3().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getMor_page3()).apply(new RequestOptions()).into(ivThree);
             ivThreeDel.setVisibility(View.VISIBLE);
         }else {
-            ivThree.setImageResource(R.drawable.bg_id);
+            ivThree.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivThreeDel.setVisibility(View.GONE);
         }
         if (item.getMor_page4() != null && !item.getMor_page4().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getMor_page4()).apply(new RequestOptions()).into(ivFour);
             ivFourDel.setVisibility(View.VISIBLE);
         }else {
-            ivFour.setImageResource(R.drawable.bg_id);
+            ivFour.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivFourDel.setVisibility(View.GONE);
         }
         if (item.getMor_page5() != null && !item.getMor_page5().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getMor_page5()).apply(new RequestOptions()).into(ivFive);
             ivFiveDel.setVisibility(View.VISIBLE);
         }else {
-            ivFive.setImageResource(R.drawable.bg_id);
+            ivFive.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivFiveDel.setVisibility(View.GONE);
         }
         if (item.getMor_page6() != null && !item.getMor_page6().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getMor_page6()).apply(new RequestOptions()).into(ivSix);
             ivSixDel.setVisibility(View.VISIBLE);
         }else {
-            ivSix.setImageResource(R.drawable.bg_id);
+            ivSix.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivSixDel.setVisibility(View.GONE);
         }
         if (item.getMor_page7() != null && !item.getMor_page7().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getMor_page7()).apply(new RequestOptions()).into(ivSeven);
             ivSevenDel.setVisibility(View.VISIBLE);
         }else {
-            ivSeven.setImageResource(R.drawable.bg_id);
+            ivSeven.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivSevenDel.setVisibility(View.GONE);
         }
         if (item.getMor_page8() != null && !item.getMor_page8().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getMor_page8()).apply(new RequestOptions()).into(ivEight);
             ivEightDel.setVisibility(View.VISIBLE);
         }else {
-            ivEight.setImageResource(R.drawable.bg_id);
+            ivEight.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivEightDel.setVisibility(View.GONE);
+        }
+        if (isLook){
+            ivOneDel.setVisibility(View.GONE);
+            ivTwoDel.setVisibility(View.GONE);
+            ivThreeDel.setVisibility(View.GONE);
+            ivFourDel.setVisibility(View.GONE);
+            ivFiveDel.setVisibility(View.GONE);
+            ivSixDel.setVisibility(View.GONE);
+            ivSevenDel.setVisibility(View.GONE);
+            ivEightDel.setVisibility(View.GONE);
+            helper.setVisible(R.id.tv_delete, false);
         }
     }
 

@@ -274,37 +274,37 @@ public class ParticularsOfInformationReceivedActivity extends BaseActivity<Docum
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_particulars_of_information_id_card:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,0,proId);
                 break;
             case R.id.ll_particulars_of_information_marriage_certificate:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,1,proId);
                 break;
             case R.id.ll_particulars_of_information_household_registration_book:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,2,proId);
                 break;
             case R.id.ll_particulars_of_information_property_ownership_certificate:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,3,proId);
                 break;
             case R.id.ll_particulars_of_information_collateral:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,4,proId);
                 break;
             case R.id.ll_particulars_of_information_business_license:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,5,proId);
                 break;
             case R.id.ll_particulars_of_information_credit_report:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,6,proId);
                 break;
             case R.id.ll_particulars_of_information_bank_running_water:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,7,proId);
                 break;
             case R.id.ll_particulars_of_information_assessment_report:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,8,proId);
                 break;
             case R.id.ll_particulars_of_information_production_adjustment:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,9,proId);
                 break;
             case R.id.ll_particulars_of_information_supplementary_materials:
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,10,proId);
                 break;
             case R.id.bt_forward:
                 setDialog("1", forId);

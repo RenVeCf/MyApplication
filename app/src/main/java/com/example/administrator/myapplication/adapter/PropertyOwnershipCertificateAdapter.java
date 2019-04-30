@@ -31,6 +31,12 @@ public class PropertyOwnershipCertificateAdapter extends BaseQuickAdapter<GetHou
         super(R.layout.adapter_property_ownership_certificate_item, data);
         this.data = data;
     }
+    private boolean isLook = false;
+    public PropertyOwnershipCertificateAdapter(@Nullable List<GetHouseImgBean.DataBean> data,boolean isLook) {
+        super(R.layout.adapter_property_ownership_certificate_item, data);
+        this.data = data;
+        this.isLook = isLook;
+    }
 
     @Override
     protected void convert(BaseViewHolder helper, final GetHouseImgBean.DataBean item) {
@@ -49,6 +55,9 @@ public class PropertyOwnershipCertificateAdapter extends BaseQuickAdapter<GetHou
         helper.setText(R.id.tv_property_ownership_certificate,"房产证" + (position+1));
         if (position == 0) {
             helper.setVisible(R.id.tv_delete, false);
+        }else{
+            helper.setVisible(R.id.tv_delete, true);
+
         }
         ImageView ivOne = helper.getView(R.id.iv_property_ownership_certificate_one);
         ImageView ivTwo = helper.getView(R.id.iv_property_ownership_certificate_two);
@@ -64,35 +73,35 @@ public class PropertyOwnershipCertificateAdapter extends BaseQuickAdapter<GetHou
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getEst_page1()).apply(new RequestOptions()).into(ivOne);
             ivOneDel.setVisibility(View.VISIBLE);
         }else {
-            ivOne.setImageResource(R.drawable.bg_id);
+            ivOne.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivOneDel.setVisibility(View.GONE);
         }
         if (item.getEst_page2() != null && !item.getEst_page2().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getEst_page2()).apply(new RequestOptions()).into(ivTwo);
             ivTwoDel.setVisibility(View.VISIBLE);
         }else {
-            ivTwo.setImageResource(R.drawable.bg_id);
+            ivTwo.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivTwoDel.setVisibility(View.GONE);
         }
         if (item.getEst_page3() != null && !item.getEst_page3().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getEst_page3()).apply(new RequestOptions()).into(ivThree);
             ivThreeDel.setVisibility(View.VISIBLE);
         }else {
-            ivThree.setImageResource(R.drawable.bg_id);
+            ivThree.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivThreeDel.setVisibility(View.GONE);
         }
         if (item.getEst_page4() != null && !item.getEst_page4().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getEst_page4()).apply(new RequestOptions()).into(ivFour);
             ivFourDel.setVisibility(View.VISIBLE);
         }else {
-            ivFour.setImageResource(R.drawable.bg_id);
+            ivFour.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivFourDel.setVisibility(View.GONE);
         }
         if (item.getEst_page5() != null && !item.getEst_page5().equals("")) {
             Glide.with(ApplicationUtil.getContext()).load(UrlConfig.BASE_URL + item.getEst_page5()).apply(new RequestOptions()).into(ivFive);
             ivFiveDel.setVisibility(View.VISIBLE);
         }else {
-            ivFive.setImageResource(R.drawable.bg_id);
+            ivFive.setImageResource(isLook?R.drawable.shape_white:R.drawable.bg_id);
             ivFiveDel.setVisibility(View.GONE);
         }
         ivOneDel.setOnClickListener(new View.OnClickListener() {
@@ -126,6 +135,14 @@ public class PropertyOwnershipCertificateAdapter extends BaseQuickAdapter<GetHou
                 notifyDataSetChanged();
             }
         });
+        if (isLook){
+            ivOneDel.setVisibility(View.GONE);
+            ivTwoDel.setVisibility(View.GONE);
+            ivThreeDel.setVisibility(View.GONE);
+            ivFourDel.setVisibility(View.GONE);
+            ivFiveDel.setVisibility(View.GONE);
+            helper.setVisible(R.id.tv_delete, false);
+        }
     }
 
 

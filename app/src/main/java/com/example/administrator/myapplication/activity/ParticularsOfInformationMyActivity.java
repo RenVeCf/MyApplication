@@ -32,7 +32,6 @@ import com.example.administrator.myapplication.contract.SelectMyInfoContract;
 import com.example.administrator.myapplication.presenter.SelectMyInfoPresenter;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
 import com.example.administrator.myapplication.utils.DateUtils;
-import com.example.administrator.myapplication.utils.LogUtils;
 import com.example.administrator.myapplication.utils.SPUtil;
 import com.example.administrator.myapplication.utils.ToastUtil;
 import com.example.administrator.myapplication.utils.isClickUtil;
@@ -323,44 +322,43 @@ public class ParticularsOfInformationMyActivity extends BaseActivity<SelectMyInf
                 break;
             case R.id.ll_particulars_of_information_my_marriage_certificate:
                 //结婚证
-
-//                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,1,proId);
                 break;
             case R.id.ll_particulars_of_information_my_household_registration_book:
                 //户口本
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,2,proId);
                 break;
             case R.id.ll_particulars_of_information_my_property_ownership_certificate:
                 //房产证
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,3,proId);
                 break;
             case R.id.ll_particulars_of_information_my_collateral:
                 //抵押物
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,4,proId);
                 break;
             case R.id.ll_particulars_of_information_my_business_license:
                 //企业信息
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,5,proId);
                 break;
             case R.id.ll_particulars_of_information_my_credit_report:
                 //信用报告
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,6,proId);
                 break;
             case R.id.ll_particulars_of_information_my_bank_running_water:
                 //银行流水
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,7,proId);
                 break;
             case R.id.ll_particulars_of_information_my_assessment_report:
                 //评估报告
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,8,proId);
                 break;
             case R.id.ll_particulars_of_information_my_production_adjustment:
                 //产调
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,9,proId);
                 break;
             case R.id.ll_particulars_of_information_my_supplementary_materials:
                 //补充资料
-                startActivity(new Intent(this, NullLayoutActivity.class));
+                NullLayoutActivity.launch(this,10,proId);
                 break;
             case R.id.bt_edit:
                 startActivity(new Intent(this, UploadDataActivity.class)

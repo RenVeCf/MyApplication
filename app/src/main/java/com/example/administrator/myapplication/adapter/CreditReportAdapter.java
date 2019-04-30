@@ -15,8 +15,6 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.activity.BigImageActivity;
 import com.example.administrator.myapplication.activity.CreditReportActivity;
-import com.example.administrator.myapplication.bean.GetCompanyInform;
-import com.example.administrator.myapplication.bean.GetCreditReportBean;
 import com.example.administrator.myapplication.bean.GetCreditReportBean;
 import com.example.administrator.myapplication.common.config.IConstants;
 import com.example.administrator.myapplication.utils.SPUtil;
@@ -36,6 +34,13 @@ public class CreditReportAdapter extends BaseQuickAdapter<GetCreditReportBean.Da
         this.data = data;
         this.context = context;
     }
+    private boolean isLook = false;
+    public CreditReportAdapter(@Nullable Context context, List<GetCreditReportBean.DataBeanX> data,boolean isLook) {
+        super(R.layout.adpter_test, data);
+        this.data = data;
+        this.context = context;
+        this.isLook = isLook;
+    }
 
     @Override
     protected void convert(BaseViewHolder helper, final GetCreditReportBean.DataBeanX item) {
@@ -44,14 +49,14 @@ public class CreditReportAdapter extends BaseQuickAdapter<GetCreditReportBean.Da
         RecyclerView rv = helper.getView(R.id.rv_registered_residence);
         final int parentPosition = helper.getLayoutPosition();
         helper.setVisible(R.id.tv_delete, false);
-        tvMyIdentityCard.setText(getTitle(parentPosition));
+        tvMyIdentityCard.setText(isLook?item.cre_type:getTitle(parentPosition));
         //设置RecyclerView方向和是否反转
         GridLayoutManager NotUseList = new GridLayoutManager(context, 2);
         rv.setLayoutManager(NotUseList);
         rv.setItemAnimator(new DefaultItemAnimator()); //默认动画
 
         //初始化数据
-        final CategoryCreditReportAdapter categoryAdapter = new CategoryCreditReportAdapter(item.data);
+        final CategoryCreditReportAdapter categoryAdapter = new CategoryCreditReportAdapter(item.data,isLook);
         rv.setAdapter(categoryAdapter);
 
         categoryAdapter.setOnItemChildClickListener(new OnItemChildClickListener() {
@@ -75,6 +80,7 @@ public class CreditReportAdapter extends BaseQuickAdapter<GetCreditReportBean.Da
                 }
             }
         });
+
     }
     public boolean isCanAdd(){
         boolean isCanAdd = false;

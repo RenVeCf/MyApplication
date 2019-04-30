@@ -1,8 +1,6 @@
 package com.example.administrator.myapplication.adapter;
 
-import android.app.Activity;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,7 +11,6 @@ import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.administrator.myapplication.R;
-import com.example.administrator.myapplication.activity.BigImageActivity;
 import com.example.administrator.myapplication.bean.GetHouseholdRegistrationBookBean;
 import com.example.administrator.myapplication.common.config.UrlConfig;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
@@ -26,6 +23,13 @@ public class CategoryAdapter extends BaseQuickAdapter<GetHouseholdRegistrationBo
     public CategoryAdapter(@Nullable List<GetHouseholdRegistrationBookBean.DataBeanX.DataBean> data) {
         super(R.layout.adapter_household_registration_item, data);
         this.data = data;
+    }
+
+    private boolean isLook = false;
+    public CategoryAdapter(@Nullable List<GetHouseholdRegistrationBookBean.DataBeanX.DataBean> data,boolean isLook) {
+        super(R.layout.adapter_household_registration_item, data);
+        this.data = data;
+        this.isLook = isLook;
     }
 
 
@@ -51,6 +55,9 @@ public class CategoryAdapter extends BaseQuickAdapter<GetHouseholdRegistrationBo
         }
         helper.addOnClickListener(R.id.iv_household_registration)
                 .addOnClickListener(R.id.iv_household_registration_del);
+        if (isLook){
+            ivHouseholdRegistrationDel.setVisibility(View.GONE);
+        }
     }
 
 //    @Override

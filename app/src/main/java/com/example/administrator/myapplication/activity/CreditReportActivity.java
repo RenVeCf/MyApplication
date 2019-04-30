@@ -13,7 +13,6 @@ import com.example.administrator.myapplication.adapter.CreditReportAdapter;
 import com.example.administrator.myapplication.base.BaseActivity;
 import com.example.administrator.myapplication.bean.GetCompanyInform;
 import com.example.administrator.myapplication.bean.GetCreditReportBean;
-import com.example.administrator.myapplication.bean.GetEnterpriseBean;
 import com.example.administrator.myapplication.bean.GetHouseholdRegistrationBookBean;
 import com.example.administrator.myapplication.bean.IdImgDataBean;
 import com.example.administrator.myapplication.bean.UploadImgBean;
@@ -23,7 +22,6 @@ import com.example.administrator.myapplication.contract.HouseholdRegistrationBoo
 import com.example.administrator.myapplication.presenter.HouseholdRegistrationBookPresenter;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
 import com.example.administrator.myapplication.utils.SPUtil;
-import com.example.administrator.myapplication.utils.StringUtils;
 import com.example.administrator.myapplication.utils.ToastUtil;
 import com.google.gson.Gson;
 import com.gyf.barlibrary.ImmersionBar;

@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import io.reactivex.ObservableTransformer;
-import okhttp3.RequestBody;
 
 /**
  * Description ：
@@ -73,7 +72,7 @@ public class LookDataModel<T> extends BaseModel {
 
         //当不需要指定是否由dialog时，可以调用这个方法
         //        subscribe(context, Api.getApiService().login(map), observerListener);
-        paramSubscribe(context, Api.getApiService().getModifyCreditReportImgData(map), observerListener, transformer, isDialog, cancelable);
+        paramSubscribe(context, Api.getApiService().getCreditReportImgData(map), observerListener, transformer, isDialog, cancelable);
     }
 
     public void getBankWaterImg(Context context, TreeMap<String, String> map, boolean isDialog, boolean cancelable,
@@ -81,7 +80,7 @@ public class LookDataModel<T> extends BaseModel {
 
         //当不需要指定是否由dialog时，可以调用这个方法
         //        subscribe(context, Api.getApiService().login(map), observerListener);
-        paramSubscribe(context, Api.getApiService().getModifyBankImgData(map), observerListener, transformer, isDialog, cancelable);
+        paramSubscribe(context, Api.getApiService().getBankImgData(map), observerListener, transformer, isDialog, cancelable);
     }
 
     public void getEvaluationReportImg(Context context, TreeMap<String, String> map, boolean isDialog, boolean cancelable,

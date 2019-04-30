@@ -2,7 +2,6 @@ package com.example.administrator.myapplication.presenter;
 
 import android.content.Context;
 
-import com.example.administrator.myapplication.bean.CardInfoBean;
 import com.example.administrator.myapplication.bean.GetAddSupplementaryBean;
 import com.example.administrator.myapplication.bean.GetAssessmentImgBean;
 import com.example.administrator.myapplication.bean.GetBankImgBean;
@@ -13,10 +12,7 @@ import com.example.administrator.myapplication.bean.GetHouseImgBean;
 import com.example.administrator.myapplication.bean.GetHouseholdRegistrationBookBean;
 import com.example.administrator.myapplication.bean.GetIdImgBean;
 import com.example.administrator.myapplication.bean.GetMarryImgBean;
-import com.example.administrator.myapplication.bean.UploadImgBean;
-import com.example.administrator.myapplication.contract.IdContract;
 import com.example.administrator.myapplication.contract.LookDataContract;
-import com.example.administrator.myapplication.model.IdModel;
 import com.example.administrator.myapplication.model.LookDataModel;
 import com.example.administrator.myapplication.progress.ObserverResponseListener;
 import com.example.administrator.myapplication.utils.ExceptionHandle;
@@ -24,8 +20,6 @@ import com.example.administrator.myapplication.utils.ToastUtil;
 
 import java.util.Map;
 import java.util.TreeMap;
-
-import okhttp3.RequestBody;
 
 /**
  * Description ：

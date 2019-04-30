@@ -7,7 +7,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -17,12 +16,8 @@ import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.activity.BigImageActivity;
 import com.example.administrator.myapplication.activity.EnterpriseInformationActivity;
 import com.example.administrator.myapplication.bean.GetCompanyInform;
-import com.example.administrator.myapplication.bean.GetHouseholdRegistrationBookBean;
-import com.example.administrator.myapplication.bean.GetIdImgBean;
 import com.example.administrator.myapplication.common.config.IConstants;
 import com.example.administrator.myapplication.utils.SPUtil;
-import com.example.administrator.myapplication.utils.StringUtils;
-import com.example.administrator.myapplication.utils.ToastUtil;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -41,6 +36,13 @@ public class EnterpriseInformationAdapter extends BaseQuickAdapter<GetCompanyInf
         this.data = data;
         this.context = context;
     }
+    private boolean isLook = false;
+public EnterpriseInformationAdapter(@Nullable Context context, List<GetCompanyInform.DataBean.StroBean.StroSecondBean> data,boolean isLook) {
+        super(R.layout.adpter_test, data);
+        this.data = data;
+        this.context = context;
+        this.isLook = isLook;
+    }
 
     @Override
     protected void convert(BaseViewHolder helper, final GetCompanyInform.DataBean.StroBean.StroSecondBean item) {
@@ -50,7 +52,7 @@ public class EnterpriseInformationAdapter extends BaseQuickAdapter<GetCompanyInf
         final int parentposition = helper.getLayoutPosition();
         helper.setVisible(R.id.tv_delete, false);
 
-        tvMyIdentityCard.setText(getTitle(parentposition));
+        tvMyIdentityCard.setText(isLook?item.data.get(0).lic_type:getTitle(parentposition));
 
         //设置RecyclerView方向和是否反转
         GridLayoutManager NotUseList = new GridLayoutManager(context, 2);
@@ -58,7 +60,7 @@ public class EnterpriseInformationAdapter extends BaseQuickAdapter<GetCompanyInf
         rv.setItemAnimator(new DefaultItemAnimator()); //默认动画
 
         //初始化数据
-        final CategoryCompanyInfromAdapter categoryAdapter = new CategoryCompanyInfromAdapter(item.data);
+        final CategoryCompanyInfromAdapter categoryAdapter = new CategoryCompanyInfromAdapter(item.data,isLook);
         rv.setAdapter(categoryAdapter);
 
         categoryAdapter.setOnItemChildClickListener(new OnItemChildClickListener() {
@@ -88,6 +90,7 @@ public class EnterpriseInformationAdapter extends BaseQuickAdapter<GetCompanyInf
                 }
             }
         });
+
     }
 
     public boolean isCanAdd(){
@@ -132,7 +135,7 @@ public class EnterpriseInformationAdapter extends BaseQuickAdapter<GetCompanyInf
         String s = "";
         switch (position) {
             case 0:
-                s = "企业信息";
+                s = "营业执照";
                 break;
             case 1:
                 s = "开户许可证";

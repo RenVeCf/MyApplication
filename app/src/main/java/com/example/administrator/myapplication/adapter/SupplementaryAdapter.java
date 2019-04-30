@@ -11,14 +11,11 @@ import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.administrator.myapplication.R;
-import com.example.administrator.myapplication.bean.GetIdImgBean;
 import com.example.administrator.myapplication.bean.SupplementaryBean;
 import com.example.administrator.myapplication.common.config.IConstants;
 import com.example.administrator.myapplication.common.config.UrlConfig;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
 import com.example.administrator.myapplication.utils.SPUtil;
-import com.example.administrator.myapplication.utils.StringUtils;
-import com.example.administrator.myapplication.utils.ToastUtil;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

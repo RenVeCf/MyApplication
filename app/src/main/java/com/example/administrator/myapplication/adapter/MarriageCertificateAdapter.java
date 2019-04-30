@@ -33,6 +33,13 @@ public class MarriageCertificateAdapter extends BaseQuickAdapter<GetMarryImgBean
         this.data = data;
     }
 
+    private boolean isLook= false;
+    public MarriageCertificateAdapter(@Nullable List<GetMarryImgBean.DataBean> data,boolean isLook) {
+        super(R.layout.adapter_marriage_certificate_item, data);
+        this.data = data;
+        this.isLook = isLook;
+    }
+
     @Override
     protected void convert(BaseViewHolder helper,final GetMarryImgBean.DataBean item) {
         helper.addOnClickListener(R.id.tv_delete)
@@ -99,6 +106,14 @@ public class MarriageCertificateAdapter extends BaseQuickAdapter<GetMarryImgBean
                 notifyDataSetChanged();
             }
         });
+
+        if (isLook){
+            ivOneDel.setVisibility(View.GONE);
+            ivTwoDel.setVisibility(View.GONE);
+            ivThreeDel.setVisibility(View.GONE);
+            helper.setVisible(R.id.tv_delete, false);
+
+        }
 
 
     }

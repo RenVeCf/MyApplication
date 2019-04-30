@@ -12,13 +12,11 @@ import com.example.administrator.myapplication.bean.GetHouseImgBean;
 import com.example.administrator.myapplication.bean.GetHouseholdRegistrationBookBean;
 import com.example.administrator.myapplication.bean.GetIdImgBean;
 import com.example.administrator.myapplication.bean.GetMarryImgBean;
-import com.example.administrator.myapplication.bean.UploadImgBean;
 
 import java.util.Map;
 import java.util.TreeMap;
 
 import io.reactivex.ObservableTransformer;
-import okhttp3.RequestBody;
 
 /**
  * Description ：LoginContract  V 、P契约类

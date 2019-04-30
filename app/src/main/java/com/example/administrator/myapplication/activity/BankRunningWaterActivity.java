@@ -3,20 +3,16 @@ package com.example.administrator.myapplication.activity;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.listener.CustomListener;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.adapter.BankAdapter;
@@ -30,13 +26,11 @@ import com.example.administrator.myapplication.bean.GetMarryImgBean;
 import com.example.administrator.myapplication.bean.IdImgDataBean;
 import com.example.administrator.myapplication.bean.UploadImgBean;
 import com.example.administrator.myapplication.common.config.IConstants;
-import com.example.administrator.myapplication.common.config.UrlConfig;
 import com.example.administrator.myapplication.common.view.TopView;
 import com.example.administrator.myapplication.contract.IdContract;
 import com.example.administrator.myapplication.presenter.IdPresenter;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
 import com.example.administrator.myapplication.utils.SPUtil;
-import com.example.administrator.myapplication.utils.StringUtils;
 import com.example.administrator.myapplication.utils.ToastUtil;
 import com.google.gson.Gson;
 import com.gyf.barlibrary.ImmersionBar;
@@ -128,7 +122,6 @@ public class BankRunningWaterActivity extends BaseActivity<IdContract.View, IdCo
         rvBankRunningWater.setItemAnimator(new DefaultItemAnimator()); //默认动画
 
         //初始化数据
-        list.add(new GetBankImgBean.DataBean());
         bankAdapter = new BankAdapter(BankRunningWaterActivity.this,list);
         rvBankRunningWater.setAdapter(bankAdapter);
     }
@@ -155,6 +148,10 @@ public class BankRunningWaterActivity extends BaseActivity<IdContract.View, IdCo
             getIdImgMap.put("userid", (String) SPUtil.get(this, IConstants.USER_ID, ""));
             getIdImgMap.put("proid", proid);
             getPresenter().getBankImg(getIdImgMap, true, false);
+        }else {
+            list.clear();
+            list.add(getData("中国银行"));
+            bankAdapter.setNewData(list);
         }
     }
 
@@ -204,19 +201,18 @@ public class BankRunningWaterActivity extends BaseActivity<IdContract.View, IdCo
 
     private ArrayList<String> getData() {
         ArrayList<String> list = new ArrayList<>();
-        list.add("浦发银行");
+        list.add("中国银行");
+        list.add("交通银行");
+        list.add("中国工商银行");
+        list.add("中国农业银行");
+        list.add("中国建设银行");
         list.add("招商银行");
-        list.add("中信银行");
-        list.add("光大银行");
         list.add("华夏银行");
-        list.add("民生银行");
+        list.add("中信银行");
         list.add("兴业银行");
-        list.add("广发银行");
-        list.add("平安银行");
-        list.add("渤海银行");
-        list.add("恒丰银行");
-        list.add("浙商银行");
-        list.add("其他");
+        list.add("浦发银行");
+        list.add("民生银行");
+        list.add("其他银行");
         return list;
     }
 

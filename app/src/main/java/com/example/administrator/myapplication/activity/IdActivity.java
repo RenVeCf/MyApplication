@@ -32,7 +32,6 @@ import com.example.administrator.myapplication.contract.IdContract;
 import com.example.administrator.myapplication.presenter.IdPresenter;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
 import com.example.administrator.myapplication.utils.SPUtil;
-import com.example.administrator.myapplication.utils.StringUtils;
 import com.example.administrator.myapplication.utils.ToastUtil;
 import com.google.gson.Gson;
 import com.gyf.barlibrary.ImmersionBar;
@@ -119,7 +118,7 @@ public class IdActivity extends BaseActivity<IdContract.View, IdContract.Present
     private GetIdImgBean.DataBean getImageData(String title){
         //初始化数据
         GetIdImgBean.DataBean dataBean = new GetIdImgBean.DataBean();
-        dataBean.setCard_type(StringUtils.gbEncoding(title));
+        dataBean.setCard_type(title);
         dataBean.setCard_proid(Integer.parseInt(proid));
         return dataBean;
     }

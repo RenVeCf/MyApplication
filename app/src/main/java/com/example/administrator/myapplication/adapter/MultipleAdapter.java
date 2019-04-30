@@ -34,6 +34,13 @@ public class MultipleAdapter extends BaseQuickAdapter<GetHouseholdRegistrationBo
         this.data = data;
         this.context = context;
     }
+    private boolean isLook = false;
+    public MultipleAdapter(@Nullable Context context, List<GetHouseholdRegistrationBookBean.DataBeanX> data,boolean isLook) {
+        super(R.layout.adpter_test, data);
+        this.data = data;
+        this.context = context;
+        this.isLook = isLook;
+    }
 
     @Override
     protected void convert(BaseViewHolder helper, final GetHouseholdRegistrationBookBean.DataBeanX item) {
@@ -56,7 +63,7 @@ public class MultipleAdapter extends BaseQuickAdapter<GetHouseholdRegistrationBo
         rv.setItemAnimator(new DefaultItemAnimator()); //默认动画
 
         //初始化数据
-        final CategoryAdapter categoryAdapter = new CategoryAdapter(item.getData());
+        final CategoryAdapter categoryAdapter = new CategoryAdapter(item.getData(),isLook);
         rv.setAdapter(categoryAdapter);
 
         categoryAdapter.setOnItemChildClickListener(new OnItemChildClickListener() {
@@ -78,6 +85,9 @@ public class MultipleAdapter extends BaseQuickAdapter<GetHouseholdRegistrationBo
                 }
             }
         });
+        if (isLook){
+            helper.setVisible(R.id.tv_delete, false);
+        }
     }
 
 

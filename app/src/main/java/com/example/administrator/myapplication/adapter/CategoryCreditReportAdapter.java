@@ -10,7 +10,6 @@ import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.administrator.myapplication.R;
-import com.example.administrator.myapplication.bean.GetCompanyInform;
 import com.example.administrator.myapplication.bean.GetCreditReportBean;
 import com.example.administrator.myapplication.common.config.UrlConfig;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
@@ -26,6 +25,12 @@ public class CategoryCreditReportAdapter extends BaseQuickAdapter<GetCreditRepor
     public CategoryCreditReportAdapter(@Nullable List<GetCreditReportBean.DataBeanX.DataBean> data) {
         super(R.layout.adapter_household_registration_item, data);
         this.data = data;
+    }
+    private boolean isLook = false;
+public CategoryCreditReportAdapter(@Nullable List<GetCreditReportBean.DataBeanX.DataBean> data,boolean isLook) {
+        super(R.layout.adapter_household_registration_item, data);
+        this.data = data;
+        this.isLook = isLook;
     }
 
 
@@ -46,6 +51,9 @@ public class CategoryCreditReportAdapter extends BaseQuickAdapter<GetCreditRepor
         }
         helper.addOnClickListener(R.id.iv_household_registration)
                 .addOnClickListener(R.id.iv_household_registration_del);
+        if (isLook){
+            imageDel.setVisibility(View.GONE);
+        }
     }
 
 

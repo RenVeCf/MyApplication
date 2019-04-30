@@ -7,24 +7,16 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.activity.BankRunningWaterActivity;
 import com.example.administrator.myapplication.activity.BigImageActivity;
-import com.example.administrator.myapplication.activity.CreditReportActivity;
 import com.example.administrator.myapplication.bean.GetBankImgBean;
-import com.example.administrator.myapplication.bean.GetCreditReportBean;
 import com.example.administrator.myapplication.common.config.IConstants;
-import com.example.administrator.myapplication.common.config.UrlConfig;
-import com.example.administrator.myapplication.utils.ApplicationUtil;
 import com.example.administrator.myapplication.utils.SPUtil;
 import com.google.gson.Gson;
 
@@ -42,6 +34,13 @@ public class BankAdapter extends BaseQuickAdapter<GetBankImgBean.DataBean, BaseV
         this.context = context;
         this.data = data;
     }
+    private boolean isLook = false;
+public BankAdapter(@Nullable Context context, @Nullable List<GetBankImgBean.DataBean> data,boolean isLook) {
+        super(R.layout.adpter_test, data);
+        this.context = context;
+        this.data = data;
+        this.isLook = isLook;
+    }
 
     @Override
     protected void convert(BaseViewHolder helper, final GetBankImgBean.DataBean item) {
@@ -57,7 +56,7 @@ public class BankAdapter extends BaseQuickAdapter<GetBankImgBean.DataBean, BaseV
         rv.setItemAnimator(new DefaultItemAnimator()); //默认动画
 
         //初始化数据
-        final CategoryBankWaterAdapter categoryAdapter = new CategoryBankWaterAdapter(item.data);
+        final CategoryBankWaterAdapter categoryAdapter = new CategoryBankWaterAdapter(item.data,isLook);
         rv.setAdapter(categoryAdapter);
         categoryAdapter.setOnItemChildClickListener(new OnItemChildClickListener() {
             @Override

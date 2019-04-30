@@ -12,13 +12,10 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.bean.GetAssessmentImgBean;
-import com.example.administrator.myapplication.bean.GetIdImgBean;
 import com.example.administrator.myapplication.common.config.IConstants;
 import com.example.administrator.myapplication.common.config.UrlConfig;
 import com.example.administrator.myapplication.utils.ApplicationUtil;
 import com.example.administrator.myapplication.utils.SPUtil;
-import com.example.administrator.myapplication.utils.StringUtils;
-import com.example.administrator.myapplication.utils.ToastUtil;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -32,6 +29,12 @@ public class AssessmentReportAdapter extends BaseQuickAdapter<GetAssessmentImgBe
     public AssessmentReportAdapter(@Nullable List<GetAssessmentImgBean.DataBean> data) {
         super(R.layout.adapter_household_registration_item, data);
         this.data = data;
+    }
+    private boolean isLook =false;
+ public AssessmentReportAdapter(@Nullable List<GetAssessmentImgBean.DataBean> data,boolean isLook) {
+        super(R.layout.adapter_household_registration_item, data);
+        this.data = data;
+        this.isLook = isLook;
     }
 
     @Override
@@ -48,6 +51,9 @@ public class AssessmentReportAdapter extends BaseQuickAdapter<GetAssessmentImgBe
             ivOneDel.setVisibility(View.GONE);
         }
         helper.getView(R.id.tv_household_registration_down).setVisibility(View.GONE);
+        if (isLook){
+            ivOneDel.setVisibility(View.GONE);
+        }
     }
 
 

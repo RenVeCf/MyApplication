@@ -138,6 +138,12 @@ public class ProductionAdjustmentActivity extends BaseActivity<ProductionAdjustm
             getIdImgMap.put("userid", (String) SPUtil.get(this, IConstants.USER_ID, ""));
             getIdImgMap.put("proid", proid);
             getPresenter().getData(getIdImgMap, true, false);
+        }else {
+            mDatas.clear();
+            if (mDatas.size() == 0){
+                mDatas.add(getInsertDate("产调1"));
+            }
+            productionAdjustmentAdapter.setNewData(mDatas);
         }
 
     }
