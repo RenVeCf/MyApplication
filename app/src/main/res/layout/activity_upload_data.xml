@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".activity.UploadDataActivity">
 
-    <com.example.administrator.myapplication.common.view.TopView
+    <com.example.ipd.yueyue.common.view.TopView
         android:id="@+id/tv_upload_data_top"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -145,9 +145,11 @@
 
                 <EditText
                     android:id="@+id/et_upload_data_loan_amount"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/x15"
+                    android:layout_weight="1"
                     android:background="@null"
                     android:gravity="end|center_vertical"
                     android:hint="@string/input"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.administrator.myapplication">
+    package="com.example.ipd.yueyue">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -21,7 +21,7 @@
         android:protectionLevel="signature" />
 
     <application
-        android:name=".utils.ApplicationUtil"
+        android:name="com.example.ipd.yueyue.utils.ApplicationUtil"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
@@ -30,10 +30,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon, android:allowBackup, theme, label, android:name">
+        <meta-data
+            android:name="channel"
+            android:value="test" />
+
         <activity
-            android:name=".activity.LoginActivity"
-            android:exported="true"
-            android:launchMode="singleTask"
+            android:name="com.example.ipd.yueyue.activity.LoginActivity"
             android:windowSoftInputMode="stateVisible|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,170 +44,53 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.example.ipd.yueyue.activity.MainActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.UploadDataActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.BriefOutlineActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.UsageOfLoanActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.PaymentActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.MonthlyAverageFlowActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.AnnualOpeningActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.CardInfoActivity" />
         <activity
-            android:name=".activity.MainActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.UploadDataActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.BriefOutlineActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.UsageOfLoanActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.PaymentActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.MonthlyAverageFlowActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.AnnualOpeningActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.CardInfoActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.RegisterActivity"
-            android:exported="true"
-            android:launchMode="singleTask"
+            android:name="com.example.ipd.yueyue.activity.RegisterActivity"
             android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name="com.example.ipd.yueyue.activity.BrowseRecordActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.ParticularsOfInformationReceivedActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.PersonalDataActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.NameActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.ServiceOrganizationActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.BusinessCooperationActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.SettingsActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.AboutUsActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.FeedBackActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.LockedFilesActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.ParticularsOfInformationLockActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.ParticularsOfInformationMyActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.ParticularsOfInformationDocumentsOfConcernActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.IdActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.MarriageCertificateActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.HouseholdRegistrationBookActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.PropertyOwnershipCertificateActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.CollateralActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.NullLayoutActivity" />
         <activity
-            android:name=".activity.BrowseRecordActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.ParticularsOfInformationReceivedActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.PersonalDataActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.NameActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.ServiceOrganizationActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.BusinessCooperationActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.SettingsActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.AboutUsActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.FeedBackActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.LockedFilesActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.ParticularsOfInformationLockActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.ParticularsOfInformationMyActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.ParticularsOfInformationDocumentsOfConcernActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.IdActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.MarriageCertificateActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.HouseholdRegistrationBookActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.PropertyOwnershipCertificateActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.CollateralActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.NullLayoutActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.ForgetPasswordActivity"
-            android:exported="true"
-            android:launchMode="singleTask"
+            android:name="com.example.ipd.yueyue.activity.ForgetPasswordActivity"
             android:windowSoftInputMode="stateVisible|adjustResize" />
-        <activity
-            android:name=".activity.ProductionAdjustmentActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.SupplementaryActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.AddSupplementaryActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.AssessmentReportActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.BankRunningWaterActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.CreditReportActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.EnterpriseInformationActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
+        <activity android:name="com.example.ipd.yueyue.activity.ProductionAdjustmentActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.SupplementaryActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.AddSupplementaryActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.AssessmentReportActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.BankRunningWaterActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.CreditReportActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.EnterpriseInformationActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.ModifyServiceOrganizationActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.ModifyPositionActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.BigImageActivity" />
+        <activity android:name="com.example.ipd.yueyue.activity.NullLayoutActivityForReceiveFile" />
 
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/network_security_config" />
-
-        <activity
-            android:name=".activity.ModifyServiceOrganizationActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.ModifyPositionActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
-
-        <activity
-            android:name=".activity.BigImageActivity"
-            android:exported="true"
-            android:launchMode="singleTask" />
     </application>
-
 </manifest>

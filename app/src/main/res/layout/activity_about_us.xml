@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".activity.AboutUsActivity">
 
-    <com.example.administrator.myapplication.common.view.TopView
+    <com.example.ipd.yueyue.common.view.TopView
         android:id="@+id/tv_about_us_top"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"

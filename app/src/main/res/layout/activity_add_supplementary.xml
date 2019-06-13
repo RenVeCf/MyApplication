@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".activity.AddSupplementaryActivity">
 
-    <com.example.administrator.myapplication.common.view.TopView
+    <com.example.ipd.yueyue.common.view.TopView
         android:id="@+id/tv_add_supplementary_top"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -31,10 +31,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/y15"
-        android:paddingTop="@dimen/y15"
         android:orientation="horizontal"
-        android:paddingStart="@dimen/x45">
+        android:paddingBottom="@dimen/y15"
+        android:paddingStart="@dimen/x45"
+        android:paddingTop="@dimen/y15">
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,32 +64,62 @@
         android:text="@string/img"
         android:textSize="12sp" />
 
-    <LinearLayout
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="@dimen/x200"-->
+    <!--android:layout_height="@dimen/y200"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginTop="@dimen/y100">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_add_supplementary"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginBottom="0dp"-->
+    <!--android:layout_marginEnd="0dp"-->
+    <!--android:layout_marginStart="0dp"-->
+    <!--android:layout_marginTop="0dp"-->
+    <!--android:background="@drawable/bg_id"-->
+    <!--android:scaleType="fitXY" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_add_supplementary_del"-->
+    <!--android:layout_width="@dimen/x45"-->
+    <!--android:layout_height="@dimen/y45"-->
+    <!--android:layout_above="@+id/iv_add_supplementary"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:visibility="gone"-->
+    <!--app:srcCompat="@drawable/ic_del_img" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginTop="@dimen/y15"-->
+    <!--android:text="@string/img" />-->
+    <!--</LinearLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_add_supplementary"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/iv_add_supplementary"
-            android:layout_width="@dimen/x200"
-            android:layout_height="@dimen/y200"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/y100"
-            android:background="@drawable/bg_id"
-            android:scaleType="fitXY" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/y15"
-            android:text="@string/img" />
-    </LinearLayout>
+        android:layout_weight="7" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="@color/whitesmoke">
 
         <Button

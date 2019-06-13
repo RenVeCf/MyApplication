@@ -110,7 +110,7 @@
     <string name="originator_">原创者:</string>
     <string name="forwarder_">转发人:</string>
     <string name="forwarding_time_">转发时间:</string>
-    <string name="whether_to_buy_houses_">是否购房:</string>
+    <string name="whether_to_buy_houses_">是否有备用房:</string>
     <string name="id">身份证</string>
     <string name="download">下载</string>
     <string name="locking">锁定</string>

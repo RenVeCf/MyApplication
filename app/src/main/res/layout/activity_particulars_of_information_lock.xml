@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".activity.ParticularsOfInformationLockActivity">
 
-    <com.example.administrator.myapplication.common.view.TopView
+    <com.example.ipd.yueyue.common.view.TopView
         android:id="@+id/tv_particulars_of_information_lock_top"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
