@@ -96,6 +96,8 @@ public class ParticularsOfInformationMyActivity extends BaseActivity<SelectMyInf
     LinearLayout llParticularsOfInformationMyProductionAdjustment;
     @BindView(R.id.ll_particulars_of_information_my_supplementary_materials)
     LinearLayout llParticularsOfInformationMySupplementaryMaterials;
+    @BindView(R.id.ll_particulars_of_information_my_brief_summary)
+    LinearLayout llParticularsOfInformationMyBriefSummary;
     @BindView(R.id.bt_edit)
     Button btEdit;
     @BindView(R.id.bt_forward)
@@ -315,7 +317,7 @@ public class ParticularsOfInformationMyActivity extends BaseActivity<SelectMyInf
         oks.show(this);
     }
 
-    @OnClick({R.id.ll_particulars_of_information_my_id_card, R.id.ll_particulars_of_information_my_marriage_certificate, R.id.ll_particulars_of_information_my_household_registration_book, R.id.ll_particulars_of_information_my_property_ownership_certificate, R.id.ll_particulars_of_information_my_collateral, R.id.ll_particulars_of_information_my_business_license, R.id.ll_particulars_of_information_my_credit_report, R.id.ll_particulars_of_information_my_bank_running_water, R.id.ll_particulars_of_information_my_assessment_report, R.id.ll_particulars_of_information_my_production_adjustment, R.id.ll_particulars_of_information_my_supplementary_materials, R.id.bt_edit, R.id.bt_forward, R.id.bt_off, R.id.bt_browse_record, R.id.tv_top_share, R.id.iv_top_back})
+    @OnClick({R.id.ll_particulars_of_information_my_id_card, R.id.ll_particulars_of_information_my_marriage_certificate, R.id.ll_particulars_of_information_my_household_registration_book, R.id.ll_particulars_of_information_my_property_ownership_certificate, R.id.ll_particulars_of_information_my_collateral, R.id.ll_particulars_of_information_my_business_license, R.id.ll_particulars_of_information_my_credit_report, R.id.ll_particulars_of_information_my_bank_running_water, R.id.ll_particulars_of_information_my_assessment_report, R.id.ll_particulars_of_information_my_production_adjustment, R.id.ll_particulars_of_information_my_supplementary_materials, R.id.ll_particulars_of_information_my_brief_summary, R.id.bt_edit, R.id.bt_forward, R.id.bt_off, R.id.bt_browse_record, R.id.tv_top_share, R.id.iv_top_back})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_particulars_of_information_my_id_card:
@@ -361,6 +363,10 @@ public class ParticularsOfInformationMyActivity extends BaseActivity<SelectMyInf
             case R.id.ll_particulars_of_information_my_supplementary_materials:
                 //补充资料
                 NullLayoutActivity.launch(this, 10, proId);
+                break;
+            case R.id.ll_particulars_of_information_my_brief_summary:
+                //简述概要
+                startActivity(new Intent(this, BriefSummaryActivity.class).putExtra("proId", proId));
                 break;
             case R.id.bt_edit:
                 startActivity(new Intent(this, UploadDataActivity.class)

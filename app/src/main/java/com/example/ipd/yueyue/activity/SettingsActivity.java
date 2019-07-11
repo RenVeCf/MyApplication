@@ -71,7 +71,7 @@ public class SettingsActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_about_us:
-                startActivity(new Intent(this, AboutUsActivity.class));
+                startActivity(new Intent(this, AboutUsActivity.class).putExtra("type", 3));
                 break;
             case R.id.ll_feed_back:
                 startActivity(new Intent(this, FeedBackActivity.class));

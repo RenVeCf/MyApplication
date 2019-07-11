@@ -98,6 +98,8 @@ public class ParticularsOfInformationLockActivity extends BaseActivity<LockedFil
     LinearLayout llParticularsOfInformationLockProductionAdjustment;
     @BindView(R.id.ll_particulars_of_information_lock_supplementary_materials)
     LinearLayout llParticularsOfInformationLockSupplementaryMaterials;
+    @BindView(R.id.ll_particulars_of_information_my_brief_summary)
+    LinearLayout llParticularsOfInformationMyBriefSummary;
     @BindView(R.id.bt_delete)
     Button btDelete;
     @BindView(R.id.tv_top_share)
@@ -222,7 +224,7 @@ public class ParticularsOfInformationLockActivity extends BaseActivity<LockedFil
         mCameraDialog.show();
     }
 
-    @OnClick({R.id.iv_top_back, R.id.ll_particulars_of_information_lock_id_card, R.id.ll_particulars_of_information_lock_marriage_certificate, R.id.ll_particulars_of_information_lock_household_registration_book, R.id.ll_particulars_of_information_lock_property_ownership_certificate, R.id.ll_particulars_of_information_lock_collateral, R.id.ll_particulars_of_information_lock_business_license, R.id.ll_particulars_of_information_lock_credit_report, R.id.ll_particulars_of_information_lock_bank_running_water, R.id.ll_particulars_of_information_lock_assessment_report, R.id.ll_particulars_of_information_lock_production_adjustment, R.id.ll_particulars_of_information_lock_supplementary_materials, R.id.bt_delete, R.id.tv_top_share})
+    @OnClick({R.id.iv_top_back, R.id.ll_particulars_of_information_lock_id_card, R.id.ll_particulars_of_information_lock_marriage_certificate, R.id.ll_particulars_of_information_lock_household_registration_book, R.id.ll_particulars_of_information_lock_property_ownership_certificate, R.id.ll_particulars_of_information_lock_collateral, R.id.ll_particulars_of_information_lock_business_license, R.id.ll_particulars_of_information_lock_credit_report, R.id.ll_particulars_of_information_lock_bank_running_water, R.id.ll_particulars_of_information_lock_assessment_report, R.id.ll_particulars_of_information_lock_production_adjustment, R.id.ll_particulars_of_information_lock_supplementary_materials,R.id.ll_particulars_of_information_my_brief_summary, R.id.bt_delete, R.id.tv_top_share})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_particulars_of_information_lock_id_card:
@@ -257,6 +259,10 @@ public class ParticularsOfInformationLockActivity extends BaseActivity<LockedFil
                 break;
             case R.id.ll_particulars_of_information_lock_supplementary_materials:
                 NullLayoutActivity.launch(this, 10, proId);
+                break;
+            case R.id.ll_particulars_of_information_my_brief_summary:
+                //简述概要
+                startActivity(new Intent(this, BriefSummaryActivity.class).putExtra("proId", proId));
                 break;
             case R.id.bt_delete:
                 setLockedFilesDialog(locId);

@@ -38,6 +38,7 @@ public interface UrlConfig {
     String MY_BROWSE_RECORD = "api/deta/brow"; //浏览记录
     String SELECT_MY_INFO = "api/deta/mylook"; //资料详情-自己查看
     String SELECT_OTHER_INFO = "api/obta/talook"; //资料详情-他人查看
+    String SELECT_BRIEF_SUMMARY = "api/schema/get"; //资料详情-简述概要
 
 
     /**

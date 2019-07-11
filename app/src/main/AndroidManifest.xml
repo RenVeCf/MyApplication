@@ -21,7 +21,7 @@
         android:protectionLevel="signature" />
 
     <application
-        android:name="com.example.ipd.yueyue.utils.ApplicationUtil"
+        android:name=".utils.ApplicationUtil"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
@@ -35,7 +35,7 @@
             android:value="test" />
 
         <activity
-            android:name="com.example.ipd.yueyue.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:windowSoftInputMode="stateVisible|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,54 +43,56 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.example.ipd.yueyue.activity.MainActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.UploadDataActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.BriefOutlineActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.UsageOfLoanActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.PaymentActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.MonthlyAverageFlowActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.AnnualOpeningActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.CardInfoActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.UploadDataActivity" />
+        <activity android:name=".activity.BriefOutlineActivity" />
+        <activity android:name=".activity.UsageOfLoanActivity" />
+        <activity android:name=".activity.PaymentActivity" />
+        <activity android:name=".activity.MonthlyAverageFlowActivity" />
+        <activity android:name=".activity.AnnualOpeningActivity" />
+        <activity android:name=".activity.CardInfoActivity" />
         <activity
-            android:name="com.example.ipd.yueyue.activity.RegisterActivity"
+            android:name=".activity.RegisterActivity"
             android:windowSoftInputMode="stateVisible|adjustResize" />
-        <activity android:name="com.example.ipd.yueyue.activity.BrowseRecordActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.ParticularsOfInformationReceivedActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.PersonalDataActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.NameActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.ServiceOrganizationActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.BusinessCooperationActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.SettingsActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.AboutUsActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.FeedBackActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.LockedFilesActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.ParticularsOfInformationLockActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.ParticularsOfInformationMyActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.ParticularsOfInformationDocumentsOfConcernActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.IdActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.MarriageCertificateActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.HouseholdRegistrationBookActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.PropertyOwnershipCertificateActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.CollateralActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.NullLayoutActivity" />
+        <activity android:name=".activity.BrowseRecordActivity" />
+        <activity android:name=".activity.ParticularsOfInformationReceivedActivity" />
+        <activity android:name=".activity.PersonalDataActivity" />
+        <activity android:name=".activity.NameActivity" />
+        <activity android:name=".activity.ServiceOrganizationActivity" />
+        <activity android:name=".activity.BusinessCooperationActivity" />
+        <activity android:name=".activity.SettingsActivity" />
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.FeedBackActivity" />
+        <activity android:name=".activity.LockedFilesActivity" />
+        <activity android:name=".activity.ParticularsOfInformationLockActivity" />
+        <activity android:name=".activity.ParticularsOfInformationMyActivity" />
+        <activity android:name=".activity.ParticularsOfInformationDocumentsOfConcernActivity" />
+        <activity android:name=".activity.IdActivity" />
+        <activity android:name=".activity.MarriageCertificateActivity" />
+        <activity android:name=".activity.HouseholdRegistrationBookActivity" />
+        <activity android:name=".activity.PropertyOwnershipCertificateActivity" />
+        <activity android:name=".activity.CollateralActivity" />
+        <activity android:name=".activity.NullLayoutActivity" />
         <activity
-            android:name="com.example.ipd.yueyue.activity.ForgetPasswordActivity"
+            android:name=".activity.ForgetPasswordActivity"
             android:windowSoftInputMode="stateVisible|adjustResize" />
-        <activity android:name="com.example.ipd.yueyue.activity.ProductionAdjustmentActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.SupplementaryActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.AddSupplementaryActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.AssessmentReportActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.BankRunningWaterActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.CreditReportActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.EnterpriseInformationActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.ModifyServiceOrganizationActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.ModifyPositionActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.BigImageActivity" />
-        <activity android:name="com.example.ipd.yueyue.activity.NullLayoutActivityForReceiveFile" />
+        <activity android:name=".activity.ProductionAdjustmentActivity" />
+        <activity android:name=".activity.SupplementaryActivity" />
+        <activity android:name=".activity.AddSupplementaryActivity" />
+        <activity android:name=".activity.AssessmentReportActivity" />
+        <activity android:name=".activity.BankRunningWaterActivity" />
+        <activity android:name=".activity.CreditReportActivity" />
+        <activity android:name=".activity.EnterpriseInformationActivity" />
+        <activity android:name=".activity.ModifyServiceOrganizationActivity" />
+        <activity android:name=".activity.ModifyPositionActivity" />
+        <activity android:name=".activity.BigImageActivity" />
+        <activity android:name=".activity.NullLayoutActivityForReceiveFile" />
 
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/network_security_config" />
+
+        <activity android:name=".activity.BriefSummaryActivity"></activity>
     </application>
+
 </manifest>

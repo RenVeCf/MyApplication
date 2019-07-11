@@ -98,6 +98,8 @@ public class ParticularsOfInformationDocumentsOfConcernActivity extends BaseActi
     LinearLayout llParticularsOfInformationProductionAdjustment;
     @BindView(R.id.ll_particulars_of_information_supplementary_materials)
     LinearLayout llParticularsOfInformationSupplementaryMaterials;
+    @BindView(R.id.ll_particulars_of_information_my_brief_summary)
+    LinearLayout llParticularsOfInformationMyBriefSummary;
     @BindView(R.id.bt_forward)
     Button btForward;
     @BindView(R.id.bt_download)
@@ -332,7 +334,7 @@ public class ParticularsOfInformationDocumentsOfConcernActivity extends BaseActi
         oks.show(this);
     }
 
-    @OnClick({R.id.ll_particulars_of_information_id_card, R.id.ll_particulars_of_information_marriage_certificate, R.id.ll_particulars_of_information_household_registration_book, R.id.ll_particulars_of_information_property_ownership_certificate, R.id.ll_particulars_of_information_collateral, R.id.ll_particulars_of_information_business_license, R.id.ll_particulars_of_information_credit_report, R.id.ll_particulars_of_information_bank_running_water, R.id.ll_particulars_of_information_assessment_report, R.id.ll_particulars_of_information_production_adjustment, R.id.ll_particulars_of_information_supplementary_materials, R.id.bt_forward, R.id.bt_download, R.id.bt_locking, R.id.bt_no_follow, R.id.tv_top_share})
+    @OnClick({R.id.ll_particulars_of_information_id_card, R.id.ll_particulars_of_information_marriage_certificate, R.id.ll_particulars_of_information_household_registration_book, R.id.ll_particulars_of_information_property_ownership_certificate, R.id.ll_particulars_of_information_collateral, R.id.ll_particulars_of_information_business_license, R.id.ll_particulars_of_information_credit_report, R.id.ll_particulars_of_information_bank_running_water, R.id.ll_particulars_of_information_assessment_report, R.id.ll_particulars_of_information_production_adjustment, R.id.ll_particulars_of_information_supplementary_materials, R.id.ll_particulars_of_information_my_brief_summary, R.id.bt_forward, R.id.bt_download, R.id.bt_locking, R.id.bt_no_follow, R.id.tv_top_share})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_particulars_of_information_id_card:
@@ -367,6 +369,10 @@ public class ParticularsOfInformationDocumentsOfConcernActivity extends BaseActi
                 break;
             case R.id.ll_particulars_of_information_supplementary_materials:
                 NullLayoutActivityForReceiveFile.launch(this, 10, forId);
+                break;
+            case R.id.ll_particulars_of_information_my_brief_summary:
+                //简述概要
+                startActivity(new Intent(this, BriefSummaryActivity.class).putExtra("proId", forId));
                 break;
             case R.id.bt_forward:
                 setDialog("1", forId);

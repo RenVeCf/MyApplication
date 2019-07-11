@@ -28,8 +28,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/x144"
         android:layout_marginEnd="@dimen/x144"
+        android:layout_marginStart="@dimen/x144"
         android:orientation="vertical">
 
         <TextView
@@ -43,8 +43,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/y90"
             android:layout_marginBottom="@dimen/y30"
+            android:layout_marginTop="@dimen/y90"
             android:orientation="horizontal">
 
             <TextView
@@ -74,8 +74,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/y30"
             android:layout_marginBottom="@dimen/y30"
+            android:layout_marginTop="@dimen/y30"
             android:orientation="horizontal">
 
             <TextView
@@ -115,8 +115,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/y30"
             android:layout_marginBottom="@dimen/y30"
+            android:layout_marginTop="@dimen/y30"
             android:orientation="horizontal">
 
             <TextView
@@ -150,13 +150,20 @@
 
             <CheckBox
                 android:id="@+id/cb_register"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:checked="true"
                 android:text="@string/user_agreement"
                 android:textColor="@color/tx_check_box"
                 android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_agreement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/agreement"
+                android:textColor="@color/tx_check_box" />
 
             <TextView
                 android:id="@+id/tv_register_login"
@@ -173,9 +180,9 @@
         android:id="@+id/bt_register"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/y135"
+        android:layout_marginEnd="@dimen/x45"
         android:layout_marginStart="@dimen/x45"
         android:layout_marginTop="@dimen/y354"
-        android:layout_marginEnd="@dimen/x45"
         android:background="@drawable/ic_login_bt"
         android:text="@string/register"
         android:textColor="@color/white" />

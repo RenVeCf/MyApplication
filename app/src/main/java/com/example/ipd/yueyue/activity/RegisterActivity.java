@@ -46,6 +46,8 @@ public class RegisterActivity extends BaseActivity<RegisterContract.View, Regist
     EditText etRegisterPwd;
     @BindView(R.id.cb_register)
     CheckBox cbRegister;
+    @BindView(R.id.tv_agreement)
+    TextView tvAgreement;
     @BindView(R.id.tv_register_login)
     TextView tvRegisterLogin;
     @BindView(R.id.bt_register)
@@ -98,9 +100,12 @@ public class RegisterActivity extends BaseActivity<RegisterContract.View, Regist
         }
     }
 
-    @OnClick({R.id.bt_get_verification_code, R.id.tv_register_login, R.id.bt_register})
+    @OnClick({R.id.bt_get_verification_code, R.id.tv_register_login, R.id.bt_register, R.id.tv_agreement})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.tv_agreement:
+                startActivity(new Intent(this, AboutUsActivity.class).putExtra("type", 1));
+                break;
             case R.id.bt_get_verification_code:
                 if (etRegisterPhone.getText().toString().trim().length() == 11 && VerifyUtils.isMobileNumber(etRegisterPhone.getText().toString().trim())) {
                     TreeMap<String, String> captchaMap = new TreeMap<>();

@@ -4,6 +4,7 @@ import android.os.Build;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 import com.example.ipd.yueyue.R;
 import com.example.ipd.yueyue.base.BaseActivity;
@@ -29,8 +30,12 @@ public class AboutUsActivity extends BaseActivity<AboutUsContract.View, AboutUsC
 
     @BindView(R.id.tv_about_us_top)
     TopView tvAboutUsTop;
+    @BindView(R.id.tv_top_title)
+    TextView tvTopTitle;
     @BindView(R.id.wv_about_us)
     WebView wvAboutUs;
+
+    private int type = 0;
 
     @Override
     public int getLayoutId() {
@@ -53,6 +58,12 @@ public class AboutUsActivity extends BaseActivity<AboutUsContract.View, AboutUsC
         ApplicationUtil.getManager().addActivity(this);
         //防止状态栏和标题重叠
         ImmersionBar.setTitleBar(this, tvAboutUsTop);
+
+        type = getIntent().getIntExtra("type", 0);
+        if (type == 1)
+            tvTopTitle.setText("用户协议");
+        else
+            tvTopTitle.setText("关于我们");
     }
 
     @Override
@@ -63,7 +74,7 @@ public class AboutUsActivity extends BaseActivity<AboutUsContract.View, AboutUsC
     @Override
     public void initData() {
         TreeMap<String, String> aboutUsMap = new TreeMap<>();
-        aboutUsMap.put("id", "3");
+        aboutUsMap.put("id", type + "");
         getPresenter().aboutUs(aboutUsMap, true, false);
     }
 

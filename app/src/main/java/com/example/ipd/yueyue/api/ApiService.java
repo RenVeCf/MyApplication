@@ -1,5 +1,6 @@
 package com.example.ipd.yueyue.api;
 
+import com.example.ipd.yueyue.bean.BriefSummaryBean;
 import com.example.ipd.yueyue.bean.BrowseRecordBean;
 import com.example.ipd.yueyue.bean.CaptchaBean;
 import com.example.ipd.yueyue.bean.CardInfoBean;
@@ -135,6 +136,11 @@ public interface ApiService {
     @FormUrlEncoded
     @POST(UrlConfig.TEXT)
     Observable<TextBean> getAboutUs(@FieldMap Map<String, String> map);
+
+    //资料详情-简述概要
+    @FormUrlEncoded
+    @POST(UrlConfig.SELECT_BRIEF_SUMMARY)
+    Observable<BriefSummaryBean> getBriefSummary(@FieldMap Map<String, String> map);
 
     //锁定文件列表
     @FormUrlEncoded

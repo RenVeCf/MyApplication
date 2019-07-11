@@ -496,6 +496,32 @@
                     android:layout_height="@dimen/y40"
                     app:srcCompat="@drawable/ic_selector" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_particulars_of_information_my_brief_summary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y120"
+                android:layout_marginBottom="@dimen/y26"
+                android:layout_marginEnd="@dimen/x54"
+                android:layout_marginStart="@dimen/x54"
+                android:background="@drawable/dialog_top_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/x45"
+                android:paddingStart="@dimen/x45">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="简述概要"
+                    android:textColor="@color/tx_check_box" />
+
+                <ImageView
+                    android:layout_width="@dimen/x45"
+                    android:layout_height="@dimen/y40"
+                    app:srcCompat="@drawable/ic_selector" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

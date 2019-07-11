@@ -87,7 +87,8 @@
     <string name="verification_code">验证码</string>
     <string name="get">获取</string>
     <string name="login_now"><u>立即登录</u></string>
-    <string name="user_agreement"><u>我已阅读并同意《用户协议》</u></string>
+    <string name="user_agreement">我已阅读并同意 </string>
+    <string name="agreement"><u>《用户协议》</u></string>
     <string name="name_of_borrower">借款人姓名:</string>
     <string name="id_card_num">身份证号:</string>
     <string name="loan_type">贷款类型:</string>
