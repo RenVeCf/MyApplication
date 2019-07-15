@@ -111,21 +111,21 @@ public class PersonalDataActivity extends BaseActivity<UploadImgContract.View, U
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode) {
-            case IConstants.REQUEST_CODE_95:
-                if (!data.getStringExtra("nameResult").equals("")) {
-                    tvPersonalDataName.setText(data.getStringExtra("nameResult"));
-                    SPUtil.put(this, IConstants.NAME, data.getStringExtra("nameResult"));
-                }
-                break;
-            case PictureSelector.SELECT_REQUEST_CODE:
-                if (data != null) {
+        if (data != null) {
+            switch (requestCode) {
+                case IConstants.REQUEST_CODE_95:
+                    if (!data.getStringExtra("nameResult").equals("")) {
+                        tvPersonalDataName.setText(data.getStringExtra("nameResult"));
+                        SPUtil.put(this, IConstants.NAME, data.getStringExtra("nameResult"));
+                    }
+                    break;
+                case PictureSelector.SELECT_REQUEST_CODE:
                     String picturePath = data.getStringExtra(PictureSelector.PICTURE_PATH);
                     Map<String, RequestBody> map = new HashMap<String, RequestBody>();
                     map.put("image\"; filename=\"" + "image" + "\"", getImageRequestBody(picturePath));
                     getPresenter().uploadImg(map, true, false);
-                }
-                break;
+                    break;
+            }
         }
     }
 
